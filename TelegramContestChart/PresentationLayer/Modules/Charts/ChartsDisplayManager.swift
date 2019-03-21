@@ -49,8 +49,8 @@ final class ChartsDisplayManager: NSObject {
         tableView?.reloadData()
     }
     
-    func updateCellAt(indexPath: IndexPath, withData data: ChartAnyCellData) {
-        let factory = ChartAnyCellFactory(data)
+    func updateCellAt(indexPath: IndexPath, withData data: ChartsAnyCellData) {
+        let factory = ChartsAnyCellFactory(data)
         tableView?.updateCellAt(indexPath: indexPath, withFactory: factory)
     }
 }

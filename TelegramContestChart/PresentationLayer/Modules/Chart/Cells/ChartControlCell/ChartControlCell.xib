@@ -24,6 +24,9 @@
                         <constraints>
                             <constraint firstAttribute="height" priority="750" constant="50" id="uBJ-hc-E0W"/>
                         </constraints>
+                        <connections>
+                            <action selector="chartViewControlDidChange:" destination="XwT-Ge-vMx" eventType="valueChanged" id="Gzy-va-YZx"/>
+                        </connections>
                     </view>
                 </subviews>
                 <constraints>

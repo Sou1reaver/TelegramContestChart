@@ -11,6 +11,7 @@ import UIKit
 
 protocol ChartDisplayManagerDelegate: class {
     func chartsDisplayManager(_ displayManager: ChartDisplayManager, didSelectDataWith dataType: ChartAnyCellDataType, at indexPath: IndexPath)
+    func chartViewControlDidChange(_ sender: ChartViewControl)
 }
 
 final class ChartDisplayManager: NSObject {
@@ -50,7 +51,7 @@ final class ChartDisplayManager: NSObject {
     }
     
     func updateCellAt(indexPath: IndexPath, withData data: ChartAnyCellData) {
-        let factory = ChartAnyCellFactory(data)
+        let factory = ChartAnyCellFactory(data, chartControlCellDelegate: self)
         tableView?.updateCellAt(indexPath: indexPath, withFactory: factory)
     }
 }
@@ -71,7 +72,7 @@ extension ChartDisplayManager: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cellModel = self.sections[indexPath.section].cellModels[indexPath.row]
-        let factory = ChartAnyCellFactory(cellModel)
+        let factory = ChartAnyCellFactory(cellModel, chartControlCellDelegate: self)
         return tableView.dequeueReusableCellWith(factory:factory, for: indexPath)
     }
 }
@@ -93,5 +94,12 @@ extension ChartDisplayManager: UITableViewDelegate {
         return CGFloat.leastNonzeroMagnitude
     }
     
+}
+
+// MARK: - ChartControlCellDelegate
+extension ChartDisplayManager: ChartControlCellDelegate {
+    func chartViewControlDidChange(_ sender: ChartViewControl) {
+        delegate?.chartViewControlDidChange(sender)
+    }
 }
 

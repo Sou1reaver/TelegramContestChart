@@ -10,6 +10,10 @@ import UIKit
 
 class ChartCell: UITableViewCell {
     @IBOutlet weak var chartDetailView: ChartDetailView!
+    
+    func updateChartWith(widthZoom: CGFloat, xOffsetScale: CGFloat) {
+        
+    }
 }
 
 struct ChartCellData: ChartAnyCellData {

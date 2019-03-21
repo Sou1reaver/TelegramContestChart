@@ -13,6 +13,7 @@ struct ChartAnyCellFactory: ReusableViewFactory {
     typealias ViewType = UITableViewCell
     
     private let model: ChartAnyCellData
+    private weak var chartControlCellDelegate: ChartControlCellDelegate?
     
     public var identifier: String {
         
@@ -29,9 +30,10 @@ struct ChartAnyCellFactory: ReusableViewFactory {
     }
     
     
-    init(_ model: ChartAnyCellData) {
+    init(_ model: ChartAnyCellData, chartControlCellDelegate: ChartControlCellDelegate?) {
         
         self.model = model
+        self.chartControlCellDelegate = chartControlCellDelegate
     }
     
     func setup(view: UITableViewCell) {
@@ -40,7 +42,7 @@ struct ChartAnyCellFactory: ReusableViewFactory {
         case (let modelObject as ChartCellData, let modelCell as ChartCell):
             ChartCellFactory(modelObject).setup(view: modelCell)
         case (let modelObject as ChartControlCellData, let modelCell as ChartControlCell):
-            ChartControlCellFactory(modelObject).setup(view: modelCell)
+            ChartControlCellFactory(modelObject, delegate: chartControlCellDelegate).setup(view: modelCell)
         case (let modelObject as ChartLineTypeCellData, let modelCell as ChartLineTypeCell):
             ChartLineTypeCellFactory(modelObject).setup(view: modelCell)
         default:

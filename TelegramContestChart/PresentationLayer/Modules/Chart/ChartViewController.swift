@@ -150,5 +150,9 @@ extension ChartViewController: ChartDisplayManagerDelegate {
             }
         }
     }
+    
+    func chartViewControlDidChange(_ sender: ChartViewControl) {
+        
+    }
 }
 

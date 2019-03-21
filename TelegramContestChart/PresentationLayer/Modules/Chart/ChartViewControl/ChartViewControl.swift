@@ -46,6 +46,13 @@ class ChartViewControl: UIControl {
     }
     private var previousLocation = CGPoint()
     
+    var widthZoom: CGFloat {
+        return contentView.bounds.width/selector.bounds.width
+    }
+    var xOffsetScale: CGFloat {
+        return selectorLeading.constant/contentView.bounds.width
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         initialSetup()
@@ -119,11 +126,11 @@ class ChartViewControl: UIControl {
     }
     
     override func endTracking(_ touch: UITouch?, with event: UIEvent?) {
-
+        selectedControlType = .none
     }
     
     override func cancelTracking(with event: UIEvent?) {
-
+        selectedControlType = .none
     }
     
     private func initialSetup() {
