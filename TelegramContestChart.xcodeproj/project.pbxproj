@@ -1,0 +1,911 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		70050B1222397E3800DC3DB5 /* ReusableViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70050B1122397E3800DC3DB5 /* ReusableViewFactory.swift */; };
+		70050B1522397EEB00DC3DB5 /* UITableView+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70050B1422397EEB00DC3DB5 /* UITableView+Factory.swift */; };
+		70050B1722397F4100DC3DB5 /* UIColor+HexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70050B1622397F4100DC3DB5 /* UIColor+HexString.swift */; };
+		70050B1A22397F8E00DC3DB5 /* TransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70050B1922397F8E00DC3DB5 /* TransitionController.swift */; };
+		70050B1D2239804100DC3DB5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70050B1C2239804100DC3DB5 /* BaseViewController.swift */; };
+		70050B21223992B700DC3DB5 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70050B20223992B700DC3DB5 /* ChartViewController.swift */; };
+		70050B252239AC4800DC3DB5 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70050B242239AC4800DC3DB5 /* ChartView.swift */; };
+		700BF6F72236B4FA00806B92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700BF6F62236B4FA00806B92 /* AppDelegate.swift */; };
+		700BF6FE2236B4FC00806B92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 700BF6FD2236B4FC00806B92 /* Assets.xcassets */; };
+		700BF7012236B4FC00806B92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 700BF6FF2236B4FC00806B92 /* LaunchScreen.storyboard */; };
+		700BF70C2236B4FC00806B92 /* TelegramContestChartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700BF70B2236B4FC00806B92 /* TelegramContestChartTests.swift */; };
+		700BF7172236B4FC00806B92 /* TelegramContestChartUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700BF7162236B4FC00806B92 /* TelegramContestChartUITests.swift */; };
+		700BF7272236B5F600806B92 /* chart_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 700BF7262236B5F600806B92 /* chart_data.json */; };
+		7014FB992236D9DF00F46360 /* Charts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7014FB982236D9DF00F46360 /* Charts.swift */; };
+		7015351922385CBE00645FF0 /* ChartsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7015351822385CBE00645FF0 /* ChartsService.swift */; };
+		706D8D0C223D4F17000060FC /* ChartDisplayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706D8D0B223D4F17000060FC /* ChartDisplayManager.swift */; };
+		706D8D15223D50AD000060FC /* ChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706D8D14223D50AD000060FC /* ChartCell.swift */; };
+		706D8D17223D50CF000060FC /* ChartControlCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706D8D16223D50CF000060FC /* ChartControlCell.swift */; };
+		706D8D1A223D5135000060FC /* ChartLineTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706D8D18223D5135000060FC /* ChartLineTypeCell.swift */; };
+		706D8D1B223D5135000060FC /* ChartLineTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 706D8D19223D5135000060FC /* ChartLineTypeCell.xib */; };
+		706D8D1E223D51A4000060FC /* ChartsAppearanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706D8D1C223D51A4000060FC /* ChartsAppearanceCell.swift */; };
+		706D8D1F223D51A4000060FC /* ChartsAppearanceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 706D8D1D223D51A4000060FC /* ChartsAppearanceCell.xib */; };
+		706D8D25223D5527000060FC /* ChartAnyCellFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706D8D24223D5527000060FC /* ChartAnyCellFactory.swift */; };
+		706D8D29223D5B2D000060FC /* ChartsSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706D8D28223D5B2D000060FC /* ChartsSectionHeaderView.swift */; };
+		706D8D2B223D5E75000060FC /* ChartSectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706D8D2A223D5E75000060FC /* ChartSectionData.swift */; };
+		706D8D2D223D7407000060FC /* ChartControlCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 706D8D2C223D7407000060FC /* ChartControlCell.xib */; };
+		706D8D2F223D77B2000060FC /* ChartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 706D8D2E223D77B2000060FC /* ChartCell.xib */; };
+		706D8D42223E7E72000060FC /* ChartsSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 706D8D41223E7E72000060FC /* ChartsSectionHeaderView.xib */; };
+		70AD1F08223ABC2500AA840D /* ChartViewControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AD1F07223ABC2500AA840D /* ChartViewControl.swift */; };
+		70FC4D162242D6F700842283 /* ChartDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70FC4D152242D6F700842283 /* ChartDetailView.xib */; };
+		70FC4D182242D71000842283 /* ChartDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FC4D172242D71000842283 /* ChartDetailView.swift */; };
+		70FC4D1A2242D8D100842283 /* UIView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FC4D192242D8D100842283 /* UIView+Nib.swift */; };
+		70FC4D1E2242FC6200842283 /* ChartsSectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FC4D1D2242FC6200842283 /* ChartsSectionData.swift */; };
+		70FC4D202242FE9000842283 /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FC4D1F2242FE9000842283 /* ChartsViewController.swift */; };
+		70FC4D222242FEBB00842283 /* Charts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70FC4D212242FEBB00842283 /* Charts.storyboard */; };
+		70FC4D242243008600842283 /* ChartsDisplayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FC4D232243008600842283 /* ChartsDisplayManager.swift */; };
+		70FC4D282243029E00842283 /* ChartsDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FC4D262243029E00842283 /* ChartsDetailCell.swift */; };
+		70FC4D292243029E00842283 /* ChartsDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70FC4D272243029E00842283 /* ChartsDetailsCell.xib */; };
+		70FC4D2B2243071700842283 /* ChartsAnyCellFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FC4D2A2243071700842283 /* ChartsAnyCellFactory.swift */; };
+		70FC4D2E224310BA00842283 /* ChartModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FC4D2D224310BA00842283 /* ChartModuleInput.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		700BF7082236B4FC00806B92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 700BF6EB2236B4FA00806B92 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 700BF6F22236B4FA00806B92;
+			remoteInfo = TelegramContestChart;
+		};
+		700BF7132236B4FC00806B92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 700BF6EB2236B4FA00806B92 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 700BF6F22236B4FA00806B92;
+			remoteInfo = TelegramContestChart;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		70050B1122397E3800DC3DB5 /* ReusableViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewFactory.swift; sourceTree = "<group>"; };
+		70050B1422397EEB00DC3DB5 /* UITableView+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Factory.swift"; sourceTree = "<group>"; };
+		70050B1622397F4100DC3DB5 /* UIColor+HexString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HexString.swift"; sourceTree = "<group>"; };
+		70050B1922397F8E00DC3DB5 /* TransitionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionController.swift; sourceTree = "<group>"; };
+		70050B1C2239804100DC3DB5 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		70050B20223992B700DC3DB5 /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
+		70050B242239AC4800DC3DB5 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		700BF6F32236B4FA00806B92 /* TelegramContestChart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TelegramContestChart.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		700BF6F62236B4FA00806B92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		700BF6FD2236B4FC00806B92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		700BF7002236B4FC00806B92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		700BF7022236B4FC00806B92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		700BF7072236B4FC00806B92 /* TelegramContestChartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TelegramContestChartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		700BF70B2236B4FC00806B92 /* TelegramContestChartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelegramContestChartTests.swift; sourceTree = "<group>"; };
+		700BF70D2236B4FC00806B92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		700BF7122236B4FC00806B92 /* TelegramContestChartUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TelegramContestChartUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		700BF7162236B4FC00806B92 /* TelegramContestChartUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelegramContestChartUITests.swift; sourceTree = "<group>"; };
+		700BF7182236B4FC00806B92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		700BF7262236B5F600806B92 /* chart_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chart_data.json; sourceTree = "<group>"; };
+		7014FB982236D9DF00F46360 /* Charts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Charts.swift; sourceTree = "<group>"; };
+		7015351822385CBE00645FF0 /* ChartsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsService.swift; sourceTree = "<group>"; };
+		706D8D0B223D4F17000060FC /* ChartDisplayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDisplayManager.swift; sourceTree = "<group>"; };
+		706D8D14223D50AD000060FC /* ChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartCell.swift; sourceTree = "<group>"; };
+		706D8D16223D50CF000060FC /* ChartControlCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartControlCell.swift; sourceTree = "<group>"; };
+		706D8D18223D5135000060FC /* ChartLineTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartLineTypeCell.swift; sourceTree = "<group>"; };
+		706D8D19223D5135000060FC /* ChartLineTypeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartLineTypeCell.xib; sourceTree = "<group>"; };
+		706D8D1C223D51A4000060FC /* ChartsAppearanceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsAppearanceCell.swift; sourceTree = "<group>"; };
+		706D8D1D223D51A4000060FC /* ChartsAppearanceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartsAppearanceCell.xib; sourceTree = "<group>"; };
+		706D8D24223D5527000060FC /* ChartAnyCellFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartAnyCellFactory.swift; sourceTree = "<group>"; };
+		706D8D28223D5B2D000060FC /* ChartsSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsSectionHeaderView.swift; sourceTree = "<group>"; };
+		706D8D2A223D5E75000060FC /* ChartSectionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartSectionData.swift; sourceTree = "<group>"; };
+		706D8D2C223D7407000060FC /* ChartControlCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartControlCell.xib; sourceTree = "<group>"; };
+		706D8D2E223D77B2000060FC /* ChartCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartCell.xib; sourceTree = "<group>"; };
+		706D8D41223E7E72000060FC /* ChartsSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartsSectionHeaderView.xib; sourceTree = "<group>"; };
+		70AD1F07223ABC2500AA840D /* ChartViewControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewControl.swift; sourceTree = "<group>"; };
+		70FC4D152242D6F700842283 /* ChartDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartDetailView.xib; sourceTree = "<group>"; };
+		70FC4D172242D71000842283 /* ChartDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDetailView.swift; sourceTree = "<group>"; };
+		70FC4D192242D8D100842283 /* UIView+Nib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Nib.swift"; sourceTree = "<group>"; };
+		70FC4D1D2242FC6200842283 /* ChartsSectionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsSectionData.swift; sourceTree = "<group>"; };
+		70FC4D1F2242FE9000842283 /* ChartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewController.swift; sourceTree = "<group>"; };
+		70FC4D212242FEBB00842283 /* Charts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Charts.storyboard; sourceTree = "<group>"; };
+		70FC4D232243008600842283 /* ChartsDisplayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsDisplayManager.swift; sourceTree = "<group>"; };
+		70FC4D262243029E00842283 /* ChartsDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsDetailCell.swift; sourceTree = "<group>"; };
+		70FC4D272243029E00842283 /* ChartsDetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartsDetailsCell.xib; sourceTree = "<group>"; };
+		70FC4D2A2243071700842283 /* ChartsAnyCellFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsAnyCellFactory.swift; sourceTree = "<group>"; };
+		70FC4D2D224310BA00842283 /* ChartModuleInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartModuleInput.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		700BF6F02236B4FA00806B92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		700BF7042236B4FC00806B92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		700BF70F2236B4FC00806B92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		70050B1022397E2C00DC3DB5 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				70050B1122397E3800DC3DB5 /* ReusableViewFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		70050B1322397ECF00DC3DB5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				70050B1422397EEB00DC3DB5 /* UITableView+Factory.swift */,
+				70050B1622397F4100DC3DB5 /* UIColor+HexString.swift */,
+				70FC4D192242D8D100842283 /* UIView+Nib.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		70050B1822397F7600DC3DB5 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				70050B1922397F8E00DC3DB5 /* TransitionController.swift */,
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
+		70050B1B2239802000DC3DB5 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				70050B1822397F7600DC3DB5 /* Transition */,
+				70050B1022397E2C00DC3DB5 /* Factory */,
+				70050B1C2239804100DC3DB5 /* BaseViewController.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		70050B1E2239928800DC3DB5 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				70FC4D1B2242F9D300842283 /* Charts */,
+				70050B1F2239929300DC3DB5 /* Chart */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		70050B1F2239929300DC3DB5 /* Chart */ = {
+			isa = PBXGroup;
+			children = (
+				70FC4D2C2243109C00842283 /* ModuleInput */,
+				70FC4D142242D6BA00842283 /* ChartDetailView */,
+				706D8D13223D5021000060FC /* Cells */,
+				706D8D0A223D4EF8000060FC /* ChartDisplayManager */,
+				70AD1F07223ABC2500AA840D /* ChartViewControl.swift */,
+				70050B242239AC4800DC3DB5 /* ChartView.swift */,
+				70050B20223992B700DC3DB5 /* ChartViewController.swift */,
+			);
+			path = Chart;
+			sourceTree = "<group>";
+		};
+		700BF6EA2236B4FA00806B92 = {
+			isa = PBXGroup;
+			children = (
+				700BF6F52236B4FA00806B92 /* TelegramContestChart */,
+				700BF70A2236B4FC00806B92 /* TelegramContestChartTests */,
+				700BF7152236B4FC00806B92 /* TelegramContestChartUITests */,
+				700BF6F42236B4FA00806B92 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		700BF6F42236B4FA00806B92 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				700BF6F32236B4FA00806B92 /* TelegramContestChart.app */,
+				700BF7072236B4FC00806B92 /* TelegramContestChartTests.xctest */,
+				700BF7122236B4FC00806B92 /* TelegramContestChartUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		700BF6F52236B4FA00806B92 /* TelegramContestChart */ = {
+			isa = PBXGroup;
+			children = (
+				700BF7282236B6BE00806B92 /* ApplicationLayer */,
+				700BF7292236B6FC00806B92 /* PresentationLayer */,
+				700BF72A2236B71B00806B92 /* BuisnessLogicLayer */,
+				700BF72B2236B72B00806B92 /* Models */,
+				700BF7242236B5AA00806B92 /* Resources */,
+				700BF7022236B4FC00806B92 /* Info.plist */,
+			);
+			path = TelegramContestChart;
+			sourceTree = "<group>";
+		};
+		700BF70A2236B4FC00806B92 /* TelegramContestChartTests */ = {
+			isa = PBXGroup;
+			children = (
+				700BF70B2236B4FC00806B92 /* TelegramContestChartTests.swift */,
+				700BF70D2236B4FC00806B92 /* Info.plist */,
+			);
+			path = TelegramContestChartTests;
+			sourceTree = "<group>";
+		};
+		700BF7152236B4FC00806B92 /* TelegramContestChartUITests */ = {
+			isa = PBXGroup;
+			children = (
+				700BF7162236B4FC00806B92 /* TelegramContestChartUITests.swift */,
+				700BF7182236B4FC00806B92 /* Info.plist */,
+			);
+			path = TelegramContestChartUITests;
+			sourceTree = "<group>";
+		};
+		700BF7242236B5AA00806B92 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				700BF7252236B5C200806B92 /* ChartInputData */,
+				700BF6FD2236B4FC00806B92 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		700BF7252236B5C200806B92 /* ChartInputData */ = {
+			isa = PBXGroup;
+			children = (
+				700BF7262236B5F600806B92 /* chart_data.json */,
+			);
+			path = ChartInputData;
+			sourceTree = "<group>";
+		};
+		700BF7282236B6BE00806B92 /* ApplicationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				700BF6F62236B4FA00806B92 /* AppDelegate.swift */,
+			);
+			path = ApplicationLayer;
+			sourceTree = "<group>";
+		};
+		700BF7292236B6FC00806B92 /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				70050B1322397ECF00DC3DB5 /* Extensions */,
+				70050B1B2239802000DC3DB5 /* Common */,
+				70050B1E2239928800DC3DB5 /* Modules */,
+				700BF6FF2236B4FC00806B92 /* LaunchScreen.storyboard */,
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		700BF72A2236B71B00806B92 /* BuisnessLogicLayer */ = {
+			isa = PBXGroup;
+			children = (
+				7015351822385CBE00645FF0 /* ChartsService.swift */,
+			);
+			path = BuisnessLogicLayer;
+			sourceTree = "<group>";
+		};
+		700BF72B2236B72B00806B92 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7014FB982236D9DF00F46360 /* Charts.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		706D8D0A223D4EF8000060FC /* ChartDisplayManager */ = {
+			isa = PBXGroup;
+			children = (
+				706D8D0B223D4F17000060FC /* ChartDisplayManager.swift */,
+			);
+			path = ChartDisplayManager;
+			sourceTree = "<group>";
+		};
+		706D8D13223D5021000060FC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				706D8D24223D5527000060FC /* ChartAnyCellFactory.swift */,
+				706D8D2A223D5E75000060FC /* ChartSectionData.swift */,
+				706D8D20223D51C8000060FC /* ChartCell */,
+				706D8D21223D51D0000060FC /* ChartControlCell */,
+				706D8D22223D51E2000060FC /* ChartLineTypeCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		706D8D20223D51C8000060FC /* ChartCell */ = {
+			isa = PBXGroup;
+			children = (
+				706D8D14223D50AD000060FC /* ChartCell.swift */,
+				706D8D2E223D77B2000060FC /* ChartCell.xib */,
+			);
+			path = ChartCell;
+			sourceTree = "<group>";
+		};
+		706D8D21223D51D0000060FC /* ChartControlCell */ = {
+			isa = PBXGroup;
+			children = (
+				706D8D16223D50CF000060FC /* ChartControlCell.swift */,
+				706D8D2C223D7407000060FC /* ChartControlCell.xib */,
+			);
+			path = ChartControlCell;
+			sourceTree = "<group>";
+		};
+		706D8D22223D51E2000060FC /* ChartLineTypeCell */ = {
+			isa = PBXGroup;
+			children = (
+				706D8D18223D5135000060FC /* ChartLineTypeCell.swift */,
+				706D8D19223D5135000060FC /* ChartLineTypeCell.xib */,
+			);
+			path = ChartLineTypeCell;
+			sourceTree = "<group>";
+		};
+		706D8D23223D51EC000060FC /* ChartsAppearanceCell */ = {
+			isa = PBXGroup;
+			children = (
+				706D8D1C223D51A4000060FC /* ChartsAppearanceCell.swift */,
+				706D8D1D223D51A4000060FC /* ChartsAppearanceCell.xib */,
+			);
+			path = ChartsAppearanceCell;
+			sourceTree = "<group>";
+		};
+		706D8D43223E81A2000060FC /* ChartsSectionHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				706D8D28223D5B2D000060FC /* ChartsSectionHeaderView.swift */,
+				706D8D41223E7E72000060FC /* ChartsSectionHeaderView.xib */,
+			);
+			path = ChartsSectionHeaderView;
+			sourceTree = "<group>";
+		};
+		70FC4D142242D6BA00842283 /* ChartDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				70FC4D152242D6F700842283 /* ChartDetailView.xib */,
+				70FC4D172242D71000842283 /* ChartDetailView.swift */,
+			);
+			path = ChartDetailView;
+			sourceTree = "<group>";
+		};
+		70FC4D1B2242F9D300842283 /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				70FC4D1C2242F9E300842283 /* Cells */,
+				70FC4D1F2242FE9000842283 /* ChartsViewController.swift */,
+				70FC4D212242FEBB00842283 /* Charts.storyboard */,
+				70FC4D232243008600842283 /* ChartsDisplayManager.swift */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
+		70FC4D1C2242F9E300842283 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				70FC4D1D2242FC6200842283 /* ChartsSectionData.swift */,
+				70FC4D2A2243071700842283 /* ChartsAnyCellFactory.swift */,
+				706D8D43223E81A2000060FC /* ChartsSectionHeaderView */,
+				70FC4D252243026800842283 /* ChartsDetailCell */,
+				706D8D23223D51EC000060FC /* ChartsAppearanceCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		70FC4D252243026800842283 /* ChartsDetailCell */ = {
+			isa = PBXGroup;
+			children = (
+				70FC4D262243029E00842283 /* ChartsDetailCell.swift */,
+				70FC4D272243029E00842283 /* ChartsDetailsCell.xib */,
+			);
+			path = ChartsDetailCell;
+			sourceTree = "<group>";
+		};
+		70FC4D2C2243109C00842283 /* ModuleInput */ = {
+			isa = PBXGroup;
+			children = (
+				70FC4D2D224310BA00842283 /* ChartModuleInput.swift */,
+			);
+			path = ModuleInput;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		700BF6F22236B4FA00806B92 /* TelegramContestChart */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 700BF71B2236B4FC00806B92 /* Build configuration list for PBXNativeTarget "TelegramContestChart" */;
+			buildPhases = (
+				700BF6EF2236B4FA00806B92 /* Sources */,
+				700BF6F02236B4FA00806B92 /* Frameworks */,
+				700BF6F12236B4FA00806B92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TelegramContestChart;
+			productName = TelegramContestChart;
+			productReference = 700BF6F32236B4FA00806B92 /* TelegramContestChart.app */;
+			productType = "com.apple.product-type.application";
+		};
+		700BF7062236B4FC00806B92 /* TelegramContestChartTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 700BF71E2236B4FC00806B92 /* Build configuration list for PBXNativeTarget "TelegramContestChartTests" */;
+			buildPhases = (
+				700BF7032236B4FC00806B92 /* Sources */,
+				700BF7042236B4FC00806B92 /* Frameworks */,
+				700BF7052236B4FC00806B92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				700BF7092236B4FC00806B92 /* PBXTargetDependency */,
+			);
+			name = TelegramContestChartTests;
+			productName = TelegramContestChartTests;
+			productReference = 700BF7072236B4FC00806B92 /* TelegramContestChartTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		700BF7112236B4FC00806B92 /* TelegramContestChartUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 700BF7212236B4FC00806B92 /* Build configuration list for PBXNativeTarget "TelegramContestChartUITests" */;
+			buildPhases = (
+				700BF70E2236B4FC00806B92 /* Sources */,
+				700BF70F2236B4FC00806B92 /* Frameworks */,
+				700BF7102236B4FC00806B92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				700BF7142236B4FC00806B92 /* PBXTargetDependency */,
+			);
+			name = TelegramContestChartUITests;
+			productName = TelegramContestChartUITests;
+			productReference = 700BF7122236B4FC00806B92 /* TelegramContestChartUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		700BF6EB2236B4FA00806B92 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Vladimir Gordienko";
+				TargetAttributes = {
+					700BF6F22236B4FA00806B92 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					700BF7062236B4FC00806B92 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 700BF6F22236B4FA00806B92;
+					};
+					700BF7112236B4FC00806B92 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 700BF6F22236B4FA00806B92;
+					};
+				};
+			};
+			buildConfigurationList = 700BF6EE2236B4FA00806B92 /* Build configuration list for PBXProject "TelegramContestChart" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 700BF6EA2236B4FA00806B92;
+			productRefGroup = 700BF6F42236B4FA00806B92 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				700BF6F22236B4FA00806B92 /* TelegramContestChart */,
+				700BF7062236B4FC00806B92 /* TelegramContestChartTests */,
+				700BF7112236B4FC00806B92 /* TelegramContestChartUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		700BF6F12236B4FA00806B92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70FC4D162242D6F700842283 /* ChartDetailView.xib in Resources */,
+				70FC4D292243029E00842283 /* ChartsDetailsCell.xib in Resources */,
+				706D8D2D223D7407000060FC /* ChartControlCell.xib in Resources */,
+				70FC4D222242FEBB00842283 /* Charts.storyboard in Resources */,
+				706D8D1B223D5135000060FC /* ChartLineTypeCell.xib in Resources */,
+				700BF7012236B4FC00806B92 /* LaunchScreen.storyboard in Resources */,
+				706D8D2F223D77B2000060FC /* ChartCell.xib in Resources */,
+				700BF6FE2236B4FC00806B92 /* Assets.xcassets in Resources */,
+				706D8D42223E7E72000060FC /* ChartsSectionHeaderView.xib in Resources */,
+				706D8D1F223D51A4000060FC /* ChartsAppearanceCell.xib in Resources */,
+				700BF7272236B5F600806B92 /* chart_data.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		700BF7052236B4FC00806B92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		700BF7102236B4FC00806B92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		700BF6EF2236B4FA00806B92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70FC4D2B2243071700842283 /* ChartsAnyCellFactory.swift in Sources */,
+				70FC4D282243029E00842283 /* ChartsDetailCell.swift in Sources */,
+				706D8D15223D50AD000060FC /* ChartCell.swift in Sources */,
+				70050B1522397EEB00DC3DB5 /* UITableView+Factory.swift in Sources */,
+				706D8D17223D50CF000060FC /* ChartControlCell.swift in Sources */,
+				70050B21223992B700DC3DB5 /* ChartViewController.swift in Sources */,
+				70FC4D1E2242FC6200842283 /* ChartsSectionData.swift in Sources */,
+				70AD1F08223ABC2500AA840D /* ChartViewControl.swift in Sources */,
+				70050B1222397E3800DC3DB5 /* ReusableViewFactory.swift in Sources */,
+				70050B252239AC4800DC3DB5 /* ChartView.swift in Sources */,
+				7015351922385CBE00645FF0 /* ChartsService.swift in Sources */,
+				70FC4D182242D71000842283 /* ChartDetailView.swift in Sources */,
+				706D8D1A223D5135000060FC /* ChartLineTypeCell.swift in Sources */,
+				706D8D25223D5527000060FC /* ChartAnyCellFactory.swift in Sources */,
+				700BF6F72236B4FA00806B92 /* AppDelegate.swift in Sources */,
+				706D8D29223D5B2D000060FC /* ChartsSectionHeaderView.swift in Sources */,
+				706D8D1E223D51A4000060FC /* ChartsAppearanceCell.swift in Sources */,
+				706D8D2B223D5E75000060FC /* ChartSectionData.swift in Sources */,
+				70FC4D202242FE9000842283 /* ChartsViewController.swift in Sources */,
+				706D8D0C223D4F17000060FC /* ChartDisplayManager.swift in Sources */,
+				70050B1D2239804100DC3DB5 /* BaseViewController.swift in Sources */,
+				70FC4D242243008600842283 /* ChartsDisplayManager.swift in Sources */,
+				70FC4D2E224310BA00842283 /* ChartModuleInput.swift in Sources */,
+				70050B1A22397F8E00DC3DB5 /* TransitionController.swift in Sources */,
+				7014FB992236D9DF00F46360 /* Charts.swift in Sources */,
+				70050B1722397F4100DC3DB5 /* UIColor+HexString.swift in Sources */,
+				70FC4D1A2242D8D100842283 /* UIView+Nib.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		700BF7032236B4FC00806B92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				700BF70C2236B4FC00806B92 /* TelegramContestChartTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		700BF70E2236B4FC00806B92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				700BF7172236B4FC00806B92 /* TelegramContestChartUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		700BF7092236B4FC00806B92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 700BF6F22236B4FA00806B92 /* TelegramContestChart */;
+			targetProxy = 700BF7082236B4FC00806B92 /* PBXContainerItemProxy */;
+		};
+		700BF7142236B4FC00806B92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 700BF6F22236B4FA00806B92 /* TelegramContestChart */;
+			targetProxy = 700BF7132236B4FC00806B92 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		700BF6FF2236B4FC00806B92 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				700BF7002236B4FC00806B92 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		700BF7192236B4FC00806B92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		700BF71A2236B4FC00806B92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		700BF71C2236B4FC00806B92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9S7F98N75J;
+				INFOPLIST_FILE = TelegramContestChart/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Vladimir-Gordienko.TelegramContestCharta";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		700BF71D2236B4FC00806B92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9S7F98N75J;
+				INFOPLIST_FILE = TelegramContestChart/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Vladimir-Gordienko.TelegramContestCharta";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		700BF71F2236B4FC00806B92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 62EURDPN8F;
+				INFOPLIST_FILE = TelegramContestChartTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Vladimir-Gordienko.TelegramContestChartTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TelegramContestChart.app/TelegramContestChart";
+			};
+			name = Debug;
+		};
+		700BF7202236B4FC00806B92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 62EURDPN8F;
+				INFOPLIST_FILE = TelegramContestChartTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Vladimir-Gordienko.TelegramContestChartTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TelegramContestChart.app/TelegramContestChart";
+			};
+			name = Release;
+		};
+		700BF7222236B4FC00806B92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 62EURDPN8F;
+				INFOPLIST_FILE = TelegramContestChartUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Vladimir-Gordienko.TelegramContestChartUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TelegramContestChart;
+			};
+			name = Debug;
+		};
+		700BF7232236B4FC00806B92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 62EURDPN8F;
+				INFOPLIST_FILE = TelegramContestChartUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Vladimir-Gordienko.TelegramContestChartUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TelegramContestChart;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		700BF6EE2236B4FA00806B92 /* Build configuration list for PBXProject "TelegramContestChart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				700BF7192236B4FC00806B92 /* Debug */,
+				700BF71A2236B4FC00806B92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		700BF71B2236B4FC00806B92 /* Build configuration list for PBXNativeTarget "TelegramContestChart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				700BF71C2236B4FC00806B92 /* Debug */,
+				700BF71D2236B4FC00806B92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		700BF71E2236B4FC00806B92 /* Build configuration list for PBXNativeTarget "TelegramContestChartTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				700BF71F2236B4FC00806B92 /* Debug */,
+				700BF7202236B4FC00806B92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		700BF7212236B4FC00806B92 /* Build configuration list for PBXNativeTarget "TelegramContestChartUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				700BF7222236B4FC00806B92 /* Debug */,
+				700BF7232236B4FC00806B92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 700BF6EB2236B4FA00806B92 /* Project object */;
+}

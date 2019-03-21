@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ChartCell" rowHeight="300" id="Mz4-cj-bD0" customClass="ChartCell" customModule="TelegramContestChart" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mz4-cj-bD0" id="bVQ-s7-6Fs">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="299.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ceu-nb-Bmo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="299.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" priority="750" constant="300" id="KJl-ZL-W0n"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ceu-nb-Bmo" firstAttribute="top" secondItem="bVQ-s7-6Fs" secondAttribute="top" id="2ak-w9-6EE"/>
+                    <constraint firstAttribute="bottom" secondItem="ceu-nb-Bmo" secondAttribute="bottom" id="Sv7-XU-xeY"/>
+                    <constraint firstItem="ceu-nb-Bmo" firstAttribute="leading" secondItem="bVQ-s7-6Fs" secondAttribute="leading" id="j0i-8b-ODC"/>
+                    <constraint firstAttribute="trailing" secondItem="ceu-nb-Bmo" secondAttribute="trailing" id="le9-2q-3yB"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="76" y="127.736131934033"/>
+        </tableViewCell>
+    </objects>
+</document>
