@@ -49,6 +49,12 @@ class ChartViewController: BaseViewController {
         return displayManager
     }()
     
+    private var dateFormatter: DateFormatter {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM dd"
+        return dateFormatter
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -58,13 +64,13 @@ class ChartViewController: BaseViewController {
         display(chart: state.chart, selectedAllLines: true)
     }
     
-    private func createSections(with chartLines:[ChartViewLine]) -> [ChartSectionData] {
+    private func createSections(with chartDetailData:ChartDetailViewData) -> [ChartSectionData] {
         
         var sections:[ChartSectionData] = []
         
         let chartsCellModels:[ChartAnyCellData] =
-            [ChartCellData(chart: chartLines),
-             ChartControlCellData(chart: chartLines)]
+            [ChartCellData(chart: chartDetailData),
+             ChartControlCellData(chart: chartDetailData.lines)]
         sections.append(ChartSectionData(type: .charts, cellModels: chartsCellModels))
         
         let linesCells = self.state.chart.lines.compactMap({ [weak self] in
@@ -103,7 +109,11 @@ class ChartViewController: BaseViewController {
                     chartViewLines.append(ChartViewLine(values: line.values, color: UIColor(hexString: line.edgeHexColor)))
                 }
             }
-            self.state.sections = self.createSections(with: chartViewLines)
+            
+            let dt = self.dateFormatter
+            let stringDates: [String] = chart.dates.compactMap({dt.string(from: $0)})
+            let chartDetailsData = ChartDetailViewData(lines: chartViewLines, dates: stringDates)
+            self.state.sections = self.createSections(with: chartDetailsData)
             DispatchQueue.main.async {[weak self] in
                 guard let sections = self?.state.sections else { return }
                 self?.displayManager.set(sections)

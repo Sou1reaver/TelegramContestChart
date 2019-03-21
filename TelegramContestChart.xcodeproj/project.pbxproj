@@ -47,6 +47,9 @@
 		70FC4D292243029E00842283 /* ChartsDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70FC4D272243029E00842283 /* ChartsDetailsCell.xib */; };
 		70FC4D2B2243071700842283 /* ChartsAnyCellFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FC4D2A2243071700842283 /* ChartsAnyCellFactory.swift */; };
 		70FC4D2E224310BA00842283 /* ChartModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FC4D2D224310BA00842283 /* ChartModuleInput.swift */; };
+		70FC4D312243F14C00842283 /* ChartViewControlSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FC4D302243F14C00842283 /* ChartViewControlSelector.swift */; };
+		70FC4D332243F16D00842283 /* ChartViewControlSelector.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70FC4D322243F16D00842283 /* ChartViewControlSelector.xib */; };
+		70FC4D352243FA6600842283 /* ChartViewControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70FC4D342243FA6600842283 /* ChartViewControl.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +116,9 @@
 		70FC4D272243029E00842283 /* ChartsDetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartsDetailsCell.xib; sourceTree = "<group>"; };
 		70FC4D2A2243071700842283 /* ChartsAnyCellFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsAnyCellFactory.swift; sourceTree = "<group>"; };
 		70FC4D2D224310BA00842283 /* ChartModuleInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartModuleInput.swift; sourceTree = "<group>"; };
+		70FC4D302243F14C00842283 /* ChartViewControlSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewControlSelector.swift; sourceTree = "<group>"; };
+		70FC4D322243F16D00842283 /* ChartViewControlSelector.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartViewControlSelector.xib; sourceTree = "<group>"; };
+		70FC4D342243FA6600842283 /* ChartViewControl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartViewControl.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,11 +194,11 @@
 		70050B1F2239929300DC3DB5 /* Chart */ = {
 			isa = PBXGroup;
 			children = (
+				70FC4D2F2243F12800842283 /* ChartViewControl */,
 				70FC4D2C2243109C00842283 /* ModuleInput */,
 				70FC4D142242D6BA00842283 /* ChartDetailView */,
 				706D8D13223D5021000060FC /* Cells */,
 				706D8D0A223D4EF8000060FC /* ChartDisplayManager */,
-				70AD1F07223ABC2500AA840D /* ChartViewControl.swift */,
 				70050B242239AC4800DC3DB5 /* ChartView.swift */,
 				70050B20223992B700DC3DB5 /* ChartViewController.swift */,
 			);
@@ -416,6 +422,17 @@
 			path = ModuleInput;
 			sourceTree = "<group>";
 		};
+		70FC4D2F2243F12800842283 /* ChartViewControl */ = {
+			isa = PBXGroup;
+			children = (
+				70AD1F07223ABC2500AA840D /* ChartViewControl.swift */,
+				70FC4D342243FA6600842283 /* ChartViewControl.xib */,
+				70FC4D302243F14C00842283 /* ChartViewControlSelector.swift */,
+				70FC4D322243F16D00842283 /* ChartViewControlSelector.xib */,
+			);
+			path = ChartViewControl;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -520,6 +537,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70FC4D352243FA6600842283 /* ChartViewControl.xib in Resources */,
 				70FC4D162242D6F700842283 /* ChartDetailView.xib in Resources */,
 				70FC4D292243029E00842283 /* ChartsDetailsCell.xib in Resources */,
 				706D8D2D223D7407000060FC /* ChartControlCell.xib in Resources */,
@@ -528,6 +546,7 @@
 				700BF7012236B4FC00806B92 /* LaunchScreen.storyboard in Resources */,
 				706D8D2F223D77B2000060FC /* ChartCell.xib in Resources */,
 				700BF6FE2236B4FC00806B92 /* Assets.xcassets in Resources */,
+				70FC4D332243F16D00842283 /* ChartViewControlSelector.xib in Resources */,
 				706D8D42223E7E72000060FC /* ChartsSectionHeaderView.xib in Resources */,
 				706D8D1F223D51A4000060FC /* ChartsAppearanceCell.xib in Resources */,
 				700BF7272236B5F600806B92 /* chart_data.json in Resources */,
@@ -563,6 +582,7 @@
 				70050B21223992B700DC3DB5 /* ChartViewController.swift in Sources */,
 				70FC4D1E2242FC6200842283 /* ChartsSectionData.swift in Sources */,
 				70AD1F08223ABC2500AA840D /* ChartViewControl.swift in Sources */,
+				70FC4D312243F14C00842283 /* ChartViewControlSelector.swift in Sources */,
 				70050B1222397E3800DC3DB5 /* ReusableViewFactory.swift in Sources */,
 				70050B252239AC4800DC3DB5 /* ChartView.swift in Sources */,
 				7015351922385CBE00645FF0 /* ChartsService.swift in Sources */,

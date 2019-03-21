@@ -18,7 +18,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="299.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ceu-nb-Bmo">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ceu-nb-Bmo" customClass="ChartDetailView" customModule="TelegramContestChart" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="299.5"/>
                         <constraints>
                             <constraint firstAttribute="height" priority="750" constant="300" id="KJl-ZL-W0n"/>
@@ -32,6 +32,9 @@
                     <constraint firstAttribute="trailing" secondItem="ceu-nb-Bmo" secondAttribute="trailing" id="le9-2q-3yB"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="chartDetailView" destination="ceu-nb-Bmo" id="C5z-Ym-Lpo"/>
+            </connections>
             <point key="canvasLocation" x="76" y="127.736131934033"/>
         </tableViewCell>
     </objects>

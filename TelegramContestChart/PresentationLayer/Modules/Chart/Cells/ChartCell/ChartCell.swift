@@ -9,7 +9,7 @@
 import UIKit
 
 class ChartCell: UITableViewCell {
-
+    @IBOutlet weak var chartDetailView: ChartDetailView!
 }
 
 struct ChartCellData: ChartAnyCellData {
@@ -17,7 +17,7 @@ struct ChartCellData: ChartAnyCellData {
     var dataType: ChartAnyCellDataType {
         return .chart
     }
-    let chart: [ChartViewLine]
+    let chart: ChartDetailViewData
 }
 
 struct ChartCellFactory: ReusableViewFactory {
@@ -32,6 +32,6 @@ struct ChartCellFactory: ReusableViewFactory {
     }
     
     func setup(view: ChartCell) {
-        
+        view.chartDetailView.setChartWith(data: model.chart)
     }
 }
