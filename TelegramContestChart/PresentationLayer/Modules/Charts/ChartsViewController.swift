@@ -49,7 +49,7 @@ class ChartsViewController: BaseViewController {
     
     func calculateHeightFor(_ chart: Chart) -> CGFloat {
 
-        let chartDetailViewHeight: CGFloat = 300
+        let chartDetailViewHeight: CGFloat = 350
         let chartControlViewHeight: CGFloat = 50
         let lineSelectionHeight: CGFloat = 45
         let linesCount = CGFloat(chart.lines.count)

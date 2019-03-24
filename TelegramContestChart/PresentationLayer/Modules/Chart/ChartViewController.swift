@@ -54,7 +54,7 @@ class ChartViewController: BaseViewController {
     
     private var dateFormatter: DateFormatter {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM dd"
+        dateFormatter.dateFormat = "MMM dd"
         return dateFormatter
     }
     

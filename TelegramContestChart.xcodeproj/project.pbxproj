@@ -35,6 +35,10 @@
 		706D8D2D223D7407000060FC /* ChartControlCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 706D8D2C223D7407000060FC /* ChartControlCell.xib */; };
 		706D8D2F223D77B2000060FC /* ChartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 706D8D2E223D77B2000060FC /* ChartCell.xib */; };
 		706D8D42223E7E72000060FC /* ChartsSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 706D8D41223E7E72000060FC /* ChartsSectionHeaderView.xib */; };
+		709CA7E62247C0CE0099E20A /* ChartDetailViewDisplayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709CA7E52247C0CE0099E20A /* ChartDetailViewDisplayManager.swift */; };
+		709CA7EA2247C1250099E20A /* ChartDetailViewDateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709CA7E82247C1250099E20A /* ChartDetailViewDateCell.swift */; };
+		709CA7EB2247C1250099E20A /* ChartDetailViewDateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 709CA7E92247C1250099E20A /* ChartDetailViewDateCell.xib */; };
+		709CA7ED2247C3130099E20A /* UICollectionView+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709CA7EC2247C3130099E20A /* UICollectionView+Factory.swift */; };
 		70AD1F08223ABC2500AA840D /* ChartViewControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AD1F07223ABC2500AA840D /* ChartViewControl.swift */; };
 		70FC4D162242D6F700842283 /* ChartDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70FC4D152242D6F700842283 /* ChartDetailView.xib */; };
 		70FC4D182242D71000842283 /* ChartDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FC4D172242D71000842283 /* ChartDetailView.swift */; };
@@ -104,6 +108,10 @@
 		706D8D2C223D7407000060FC /* ChartControlCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartControlCell.xib; sourceTree = "<group>"; };
 		706D8D2E223D77B2000060FC /* ChartCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartCell.xib; sourceTree = "<group>"; };
 		706D8D41223E7E72000060FC /* ChartsSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartsSectionHeaderView.xib; sourceTree = "<group>"; };
+		709CA7E52247C0CE0099E20A /* ChartDetailViewDisplayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDetailViewDisplayManager.swift; sourceTree = "<group>"; };
+		709CA7E82247C1250099E20A /* ChartDetailViewDateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDetailViewDateCell.swift; sourceTree = "<group>"; };
+		709CA7E92247C1250099E20A /* ChartDetailViewDateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartDetailViewDateCell.xib; sourceTree = "<group>"; };
+		709CA7EC2247C3130099E20A /* UICollectionView+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Factory.swift"; sourceTree = "<group>"; };
 		70AD1F07223ABC2500AA840D /* ChartViewControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewControl.swift; sourceTree = "<group>"; };
 		70FC4D152242D6F700842283 /* ChartDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartDetailView.xib; sourceTree = "<group>"; };
 		70FC4D172242D71000842283 /* ChartDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDetailView.swift; sourceTree = "<group>"; };
@@ -158,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				70050B1422397EEB00DC3DB5 /* UITableView+Factory.swift */,
+				709CA7EC2247C3130099E20A /* UICollectionView+Factory.swift */,
 				70050B1622397F4100DC3DB5 /* UIColor+HexString.swift */,
 				70FC4D192242D8D100842283 /* UIView+Nib.swift */,
 			);
@@ -373,11 +382,22 @@
 			path = ChartsSectionHeaderView;
 			sourceTree = "<group>";
 		};
+		709CA7E72247C0FC0099E20A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				709CA7E82247C1250099E20A /* ChartDetailViewDateCell.swift */,
+				709CA7E92247C1250099E20A /* ChartDetailViewDateCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		70FC4D142242D6BA00842283 /* ChartDetailView */ = {
 			isa = PBXGroup;
 			children = (
+				709CA7E72247C0FC0099E20A /* Cells */,
 				70FC4D152242D6F700842283 /* ChartDetailView.xib */,
 				70FC4D172242D71000842283 /* ChartDetailView.swift */,
+				709CA7E52247C0CE0099E20A /* ChartDetailViewDisplayManager.swift */,
 			);
 			path = ChartDetailView;
 			sourceTree = "<group>";
@@ -545,6 +565,7 @@
 				706D8D1B223D5135000060FC /* ChartLineTypeCell.xib in Resources */,
 				700BF7012236B4FC00806B92 /* LaunchScreen.storyboard in Resources */,
 				706D8D2F223D77B2000060FC /* ChartCell.xib in Resources */,
+				709CA7EB2247C1250099E20A /* ChartDetailViewDateCell.xib in Resources */,
 				700BF6FE2236B4FC00806B92 /* Assets.xcassets in Resources */,
 				70FC4D332243F16D00842283 /* ChartViewControlSelector.xib in Resources */,
 				706D8D42223E7E72000060FC /* ChartsSectionHeaderView.xib in Resources */,
@@ -579,8 +600,11 @@
 				706D8D15223D50AD000060FC /* ChartCell.swift in Sources */,
 				70050B1522397EEB00DC3DB5 /* UITableView+Factory.swift in Sources */,
 				706D8D17223D50CF000060FC /* ChartControlCell.swift in Sources */,
+				709CA7ED2247C3130099E20A /* UICollectionView+Factory.swift in Sources */,
+				709CA7E62247C0CE0099E20A /* ChartDetailViewDisplayManager.swift in Sources */,
 				70050B21223992B700DC3DB5 /* ChartViewController.swift in Sources */,
 				70FC4D1E2242FC6200842283 /* ChartsSectionData.swift in Sources */,
+				709CA7EA2247C1250099E20A /* ChartDetailViewDateCell.swift in Sources */,
 				70AD1F08223ABC2500AA840D /* ChartViewControl.swift in Sources */,
 				70FC4D312243F14C00842283 /* ChartViewControlSelector.swift in Sources */,
 				70050B1222397E3800DC3DB5 /* ReusableViewFactory.swift in Sources */,

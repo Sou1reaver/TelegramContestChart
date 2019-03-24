@@ -15,13 +15,20 @@ struct ChartDetailViewData {
 
 class ChartDetailView: UIView {
 
+    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
+    
+    private lazy var displayManager: ChartDetailViewDisplayManager = {
+        
+        let displayManager = ChartDetailViewDisplayManager(collectionView: collectionView)
+        return displayManager
+    }()
     
     private var maxVisibleLineValue = 0
     private var data: ChartDetailViewData?
     private lazy var chartView: ChartView = {
-        let chartView = ChartView(frame: bounds)
+        let chartView = ChartView(frame: scrollView.bounds)
         chartView.backgroundColor = .white
         contentView.addSubview(chartView)
         return chartView
@@ -47,10 +54,12 @@ class ChartDetailView: UIView {
     
     private func initialSetup() {
         fromNib()
+        updateFrames()
     }
     
     private func updateFrames() {
-        let newWidth = bounds.width*chartXZoom
+        scrollView.layoutIfNeeded()
+        let newWidth = scrollView.bounds.width*chartXZoom
         let xOffset: CGFloat
         if xOffsetScale == 1 {
             xOffset = 0
@@ -70,23 +79,38 @@ class ChartDetailView: UIView {
         chartXZoom = zoom
         updateFrames()
         
-        let visibleRect = convert(bounds, to: chartView)
+        let visibleRect = convert(scrollView.frame, to: chartView)
         let xSpace = chartView.bounds.width/CGFloat(data.chartViewData.maxLineValuesCount)
         var maxLineVisibleValue = 0
         
+        var visibleValuesDates: [String] = []
+        let xSpaceForData = collectionView.bounds.width/6
+        
         for line in data.chartViewData.lines {
+            var dateXCoor: CGFloat = 0
             for (index, value) in line.values.enumerated() {
                 let x = CGFloat(round(xSpace*CGFloat(index)))
+
                 if x >= visibleRect.minX && x <= visibleRect.maxX {
                     if maxLineVisibleValue < value {
                         maxLineVisibleValue = value
                     }
+                    if data.dates.count > index && dateXCoor < x  {
+                        let date = data.dates[index]
+                        if !visibleValuesDates.contains(date) {
+                            visibleValuesDates.append(date)
+                        }
+                        dateXCoor += xSpaceForData
+                    }
+
                 }
             }
         }
-        if let data = self.data, maxLineVisibleValue > 0 {
+        if let data = self.data {
             chartView.drawChartWith(data: data.chartViewData, withMaxLineVisibleValue: maxLineVisibleValue)
         }
+        
+        displayManager.set(visibleValuesDates)
     }
 
 }

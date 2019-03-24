@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChartDetailView" customModule="TelegramContestChart" customModuleProvider="target">
             <connections>
+                <outlet property="collectionView" destination="19V-id-Mjp" id="IW9-f1-FdN"/>
                 <outlet property="contentView" destination="4Y9-AT-RPa" id="1YT-pm-FQq"/>
                 <outlet property="scrollView" destination="9Ov-Xi-yGq" id="C6r-x6-sCR"/>
             </connections>
@@ -22,10 +23,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ov-Xi-yGq">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="369"/>
+                    <rect key="frame" x="16" y="0.0" width="343" height="324"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Y9-AT-RPa">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="369"/>
+                            <rect key="frame" x="0.0" y="0.0" width="343" height="324"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                     </subviews>
@@ -38,13 +39,39 @@
                         <constraint firstItem="4Y9-AT-RPa" firstAttribute="leading" secondItem="9Ov-Xi-yGq" secondAttribute="leading" id="u6N-DV-Z9J"/>
                     </constraints>
                 </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F3V-VA-20L" userLabel="SeparatorView">
+                    <rect key="frame" x="16" y="324" width="343" height="1"/>
+                    <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" priority="750" constant="1" id="TfG-WV-MGM"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="19V-id-Mjp">
+                    <rect key="frame" x="16" y="325" width="343" height="44"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" priority="750" constant="44" id="2BW-jk-moH"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4NQ-68-jTW">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="9Ov-Xi-yGq" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="9QU-J7-7SD"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="9Ov-Xi-yGq" secondAttribute="trailing" id="Dcu-FL-a6U"/>
-                <constraint firstItem="9Ov-Xi-yGq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Ufg-1Q-wa4"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="9Ov-Xi-yGq" secondAttribute="bottom" id="p5o-BY-741"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="F3V-VA-20L" secondAttribute="trailing" constant="16" id="BOb-n7-dft"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="9Ov-Xi-yGq" secondAttribute="trailing" constant="16" id="Dcu-FL-a6U"/>
+                <constraint firstItem="19V-id-Mjp" firstAttribute="top" secondItem="F3V-VA-20L" secondAttribute="bottom" id="K3f-TY-JUK"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="19V-id-Mjp" secondAttribute="trailing" constant="16" id="OmK-al-SSc"/>
+                <constraint firstItem="F3V-VA-20L" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="TJ0-tV-ge1"/>
+                <constraint firstItem="9Ov-Xi-yGq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Ufg-1Q-wa4"/>
+                <constraint firstItem="19V-id-Mjp" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="Y5k-SC-FH9"/>
+                <constraint firstItem="19V-id-Mjp" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="dUa-32-v0M"/>
+                <constraint firstItem="F3V-VA-20L" firstAttribute="top" secondItem="9Ov-Xi-yGq" secondAttribute="bottom" id="tt6-Xh-0RT"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
