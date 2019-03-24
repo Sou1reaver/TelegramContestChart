@@ -11,7 +11,7 @@ import UIKit
 
 protocol ChartDisplayManagerDelegate: class {
     func chartsDisplayManager(_ displayManager: ChartDisplayManager, didSelectDataWith dataType: ChartAnyCellDataType, at indexPath: IndexPath)
-    func chartViewControlDidChange(_ sender: ChartViewControl)
+    func chartsDisplayManager(_ displayManager: ChartDisplayManager, didChangeChatWidthZoom zoom: CGFloat, and xOffsetScale: CGFloat)
 }
 
 final class ChartDisplayManager: NSObject {
@@ -99,7 +99,7 @@ extension ChartDisplayManager: UITableViewDelegate {
 // MARK: - ChartControlCellDelegate
 extension ChartDisplayManager: ChartControlCellDelegate {
     func chartViewControlDidChange(_ sender: ChartViewControl) {
-        delegate?.chartViewControlDidChange(sender)
+        delegate?.chartsDisplayManager(self, didChangeChatWidthZoom: sender.widthZoom, and: sender.xOffsetScale)
     }
 }
 

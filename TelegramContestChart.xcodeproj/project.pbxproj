@@ -194,8 +194,8 @@
 		70050B1F2239929300DC3DB5 /* Chart */ = {
 			isa = PBXGroup;
 			children = (
-				70FC4D2F2243F12800842283 /* ChartViewControl */,
 				70FC4D2C2243109C00842283 /* ModuleInput */,
+				70FC4D2F2243F12800842283 /* ChartViewControl */,
 				70FC4D142242D6BA00842283 /* ChartDetailView */,
 				706D8D13223D5021000060FC /* Cells */,
 				706D8D0A223D4EF8000060FC /* ChartDisplayManager */,

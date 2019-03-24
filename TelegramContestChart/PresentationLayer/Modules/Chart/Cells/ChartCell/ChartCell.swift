@@ -10,10 +10,6 @@ import UIKit
 
 class ChartCell: UITableViewCell {
     @IBOutlet weak var chartDetailView: ChartDetailView!
-    
-    func updateChartWith(widthZoom: CGFloat, xOffsetScale: CGFloat) {
-        
-    }
 }
 
 struct ChartCellData: ChartAnyCellData {
@@ -22,6 +18,8 @@ struct ChartCellData: ChartAnyCellData {
         return .chart
     }
     let chart: ChartDetailViewData
+    let chatWidthZoom: CGFloat
+    let chatXOffsetScale: CGFloat
 }
 
 struct ChartCellFactory: ReusableViewFactory {
@@ -36,6 +34,6 @@ struct ChartCellFactory: ReusableViewFactory {
     }
     
     func setup(view: ChartCell) {
-        view.chartDetailView.setChartWith(data: model.chart)
+        view.chartDetailView.setChartWith(data: model.chart, withWidthZoom: model.chatWidthZoom, and: model.chatXOffsetScale)
     }
 }

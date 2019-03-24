@@ -67,8 +67,8 @@ class ChartViewControl: UIControl {
         super.layoutSubviews()
         
         if isFirstLayout {
-            selectorLeading.constant = maxSelectorkX
-            selectorWidth.constant = minSelectorkWidth
+            selectorLeading.constant = minSelectorkX
+            selectorWidth.constant = contentView.bounds.width
 
         }
         updateLayerFrames()
@@ -109,10 +109,12 @@ class ChartViewControl: UIControl {
             selectorWidth.constant += oldLeading-newLeading
 
         case .right:
+            
             let newWidth = selectorWidth.constant + deltaLocation
-            selectorWidth.constant = max(minSelectorkWidth, min(newWidth, contentView.bounds.width-selectorLeading.constant))
+            selectorWidth.constant = boundSelectorWidth(newWidth)
         case .middle:
-            selectorLeading.constant = max(minSelectorkX, min(maxSelectorkX, selectorLeading.constant + deltaLocation))
+            let newOffset = selectorLeading.constant + deltaLocation
+            selectorLeading.constant = boundXOffset(newOffset)
         case .none:
             return false
         }
@@ -135,13 +137,17 @@ class ChartViewControl: UIControl {
     
     private func initialSetup() {
         fromNib()
-        selectorLeading.constant = maxSelectorkX
-        selectorWidth.constant = minSelectorkWidth
+        selectorLeading.constant = minSelectorkX
+        selectorWidth.constant = contentView.bounds.width
         
     }
     
-    private func boundValue(value: Double, toLowerValue lowerValue: Double, upperValue: Double) -> Double {
-        return min(max(value, lowerValue), upperValue)
+    private func boundSelectorWidth(_ width: CGFloat) -> CGFloat {
+        return max(minSelectorkWidth, min(width, contentView.bounds.width-selectorLeading.constant))
+    }
+    
+    private func boundXOffset(_ offset: CGFloat) -> CGFloat {
+        return max(minSelectorkX, min(maxSelectorkX, offset))
     }
     
     private func updateLayerFrames()  {
@@ -164,7 +170,7 @@ class ChartViewControl: UIControl {
         CATransaction.commit()
     }
     
-    func addChartWith(lines: [ChartViewLine]) {
-        chartView.drawChartWith(lines: lines)
+    func addChartWith(data: ChartViewData) {
+        chartView.drawChartWith(data: data, withMaxLineVisibleValue: data.maxLineValue)
     }
 }

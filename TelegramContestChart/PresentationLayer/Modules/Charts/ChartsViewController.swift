@@ -108,7 +108,8 @@ extension ChartsViewController: ChartsDisplayManagerDelegate {
             let height = calculateHeightFor(chart)
             chartCell.heightContainer.constant = height
             showSubmodule(ChartViewController(), onView: chartCell.containerView, configuration: { (moduleInput) in
-                moduleInput.setInitialData(chart)
+                let initialState = ChartModuleInitialState(chart: chart, chatWidthZoom: 1, chatXOffsetScale: 1)
+                moduleInput.setInitialData(initialState)
             })
         case .appearance:
             break

@@ -6,16 +6,23 @@
 //  Copyright © 2019 Vladimir Gordienko. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+struct ChartModuleInitialState {
+    
+    let chart: Chart
+    let chatWidthZoom: CGFloat
+    let chatXOffsetScale: CGFloat
+}
 
 protocol ChartModuleInput: AnyModuleInput {
-    func setInitialChart(_ chart: Chart)
+    func set(_ initialState: ChartModuleInitialState)
 }
 
 extension ChartModuleInput {
     func setInitialData<DataType>(_ data: DataType) {
-        if let chart = data as? Chart {
-            setInitialChart(chart)
+        if let state = data as? ChartModuleInitialState {
+            set(state)
         }
     }
 }

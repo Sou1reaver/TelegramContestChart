@@ -27,7 +27,7 @@ struct ChartControlCellData: ChartAnyCellData {
     var dataType: ChartAnyCellDataType {
         return .chartControl
     }
-    let chart: [ChartViewLine]
+    let chartData: ChartViewData
 }
 
 struct ChartControlCellFactory: ReusableViewFactory {
@@ -44,7 +44,7 @@ struct ChartControlCellFactory: ReusableViewFactory {
     }
     
     func setup(view: ChartControlCell) {
-        view.chartsViewControl.addChartWith(lines: model.chart)
+        view.chartsViewControl.addChartWith(data: model.chartData)
         view.delegate = delegate
     }
 }
