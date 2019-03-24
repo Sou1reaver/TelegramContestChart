@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="collectionView" destination="19V-id-Mjp" id="IW9-f1-FdN"/>
                 <outlet property="contentView" destination="4Y9-AT-RPa" id="1YT-pm-FQq"/>
+                <outlet property="lineValuesTableView" destination="EWY-gQ-Ofy" id="4Cb-zd-pAa"/>
                 <outlet property="scrollView" destination="9Ov-Xi-yGq" id="C6r-x6-sCR"/>
             </connections>
         </placeholder>
@@ -22,14 +23,19 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="369"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EWY-gQ-Ofy">
+                    <rect key="frame" x="16" y="0.0" width="343" height="325"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ov-Xi-yGq">
                     <rect key="frame" x="16" y="0.0" width="343" height="324"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Y9-AT-RPa">
                             <rect key="frame" x="0.0" y="0.0" width="343" height="324"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                     </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="4Y9-AT-RPa" firstAttribute="top" secondItem="9Ov-Xi-yGq" secondAttribute="top" id="1nI-us-eIL"/>
                         <constraint firstItem="4Y9-AT-RPa" firstAttribute="centerY" secondItem="9Ov-Xi-yGq" secondAttribute="centerY" id="DeH-Wt-uO3"/>
@@ -62,13 +68,17 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="EWY-gQ-Ofy" secondAttribute="trailing" constant="16" id="653-WY-IA4"/>
                 <constraint firstItem="9Ov-Xi-yGq" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="9QU-J7-7SD"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="F3V-VA-20L" secondAttribute="trailing" constant="16" id="BOb-n7-dft"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="9Ov-Xi-yGq" secondAttribute="trailing" constant="16" id="Dcu-FL-a6U"/>
+                <constraint firstItem="EWY-gQ-Ofy" firstAttribute="bottom" secondItem="F3V-VA-20L" secondAttribute="bottom" id="J4u-Pd-uLh"/>
                 <constraint firstItem="19V-id-Mjp" firstAttribute="top" secondItem="F3V-VA-20L" secondAttribute="bottom" id="K3f-TY-JUK"/>
+                <constraint firstItem="EWY-gQ-Ofy" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Khm-qh-Il7"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="19V-id-Mjp" secondAttribute="trailing" constant="16" id="OmK-al-SSc"/>
                 <constraint firstItem="F3V-VA-20L" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="TJ0-tV-ge1"/>
                 <constraint firstItem="9Ov-Xi-yGq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Ufg-1Q-wa4"/>
+                <constraint firstItem="EWY-gQ-Ofy" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="XLo-6O-ZsJ"/>
                 <constraint firstItem="19V-id-Mjp" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="Y5k-SC-FH9"/>
                 <constraint firstItem="19V-id-Mjp" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="dUa-32-v0M"/>
                 <constraint firstItem="F3V-VA-20L" firstAttribute="top" secondItem="9Ov-Xi-yGq" secondAttribute="bottom" id="tt6-Xh-0RT"/>

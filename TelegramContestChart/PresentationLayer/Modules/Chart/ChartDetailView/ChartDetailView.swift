@@ -15,13 +15,20 @@ struct ChartDetailViewData {
 
 class ChartDetailView: UIView {
 
+    @IBOutlet weak var lineValuesTableView: UITableView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
     
-    private lazy var displayManager: ChartDetailViewDisplayManager = {
+    private lazy var datesDisplayManager: ChartDetailViewDatesDisplayManager = {
         
-        let displayManager = ChartDetailViewDisplayManager(collectionView: collectionView)
+        let displayManager = ChartDetailViewDatesDisplayManager(collectionView: collectionView)
+        return displayManager
+    }()
+    
+    private lazy var lineValuesDisplayManager: ChartDetailViewLineValuesDisplayManager = {
+        
+        let displayManager = ChartDetailViewLineValuesDisplayManager(tableView: lineValuesTableView)
         return displayManager
     }()
     
@@ -29,7 +36,7 @@ class ChartDetailView: UIView {
     private var data: ChartDetailViewData?
     private lazy var chartView: ChartView = {
         let chartView = ChartView(frame: scrollView.bounds)
-        chartView.backgroundColor = .white
+        chartView.backgroundColor = .clear
         contentView.addSubview(chartView)
         return chartView
     }()
@@ -73,6 +80,7 @@ class ChartDetailView: UIView {
     }
 
     func setChartWith(data: ChartDetailViewData, withWidthZoom zoom: CGFloat, and xOffsetScale: CGFloat) {
+        layoutIfNeeded()
         self.data = data
         self.xOffsetScale = xOffsetScale
         
@@ -110,7 +118,30 @@ class ChartDetailView: UIView {
             chartView.drawChartWith(data: data.chartViewData, withMaxLineVisibleValue: maxLineVisibleValue)
         }
         
-        displayManager.set(visibleValuesDates)
+        datesDisplayManager.set(visibleValuesDates)
+        lineValuesDisplayManager.set(valuesForTablefrom(maxLineVisibleValue: maxLineVisibleValue))
+    }
+    
+    private func valuesForTablefrom(maxLineVisibleValue: Int) -> [Int] {
+        
+        let numberValuesMoreZero = 5
+        var values = [Int]()
+        var step = 0
+        for i in (0...maxLineVisibleValue).reversed() {
+            if i % numberValuesMoreZero == 0 {
+                if (i/numberValuesMoreZero) % 10 == 0 {
+                    step = i/numberValuesMoreZero
+                    break
+                }
+
+            }
+        }
+        
+        for i in (1...numberValuesMoreZero).reversed() {
+            values.append(step*i)
+        }
+        values.append(0)
+        return values
     }
 
 }

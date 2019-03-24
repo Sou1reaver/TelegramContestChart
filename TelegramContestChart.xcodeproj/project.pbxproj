@@ -35,10 +35,13 @@
 		706D8D2D223D7407000060FC /* ChartControlCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 706D8D2C223D7407000060FC /* ChartControlCell.xib */; };
 		706D8D2F223D77B2000060FC /* ChartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 706D8D2E223D77B2000060FC /* ChartCell.xib */; };
 		706D8D42223E7E72000060FC /* ChartsSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 706D8D41223E7E72000060FC /* ChartsSectionHeaderView.xib */; };
-		709CA7E62247C0CE0099E20A /* ChartDetailViewDisplayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709CA7E52247C0CE0099E20A /* ChartDetailViewDisplayManager.swift */; };
+		709CA7E62247C0CE0099E20A /* ChartDetailViewDatesDisplayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709CA7E52247C0CE0099E20A /* ChartDetailViewDatesDisplayManager.swift */; };
 		709CA7EA2247C1250099E20A /* ChartDetailViewDateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709CA7E82247C1250099E20A /* ChartDetailViewDateCell.swift */; };
 		709CA7EB2247C1250099E20A /* ChartDetailViewDateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 709CA7E92247C1250099E20A /* ChartDetailViewDateCell.xib */; };
 		709CA7ED2247C3130099E20A /* UICollectionView+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709CA7EC2247C3130099E20A /* UICollectionView+Factory.swift */; };
+		70A939E12247E0E9003037DF /* ChartDetailViewLineValuesDisplayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A939E02247E0E9003037DF /* ChartDetailViewLineValuesDisplayManager.swift */; };
+		70A939E42247E12B003037DF /* ChartDetailViewLineValueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A939E22247E12B003037DF /* ChartDetailViewLineValueCell.swift */; };
+		70A939E52247E12B003037DF /* ChartDetailViewLineValueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70A939E32247E12B003037DF /* ChartDetailViewLineValueCell.xib */; };
 		70AD1F08223ABC2500AA840D /* ChartViewControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AD1F07223ABC2500AA840D /* ChartViewControl.swift */; };
 		70FC4D162242D6F700842283 /* ChartDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70FC4D152242D6F700842283 /* ChartDetailView.xib */; };
 		70FC4D182242D71000842283 /* ChartDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FC4D172242D71000842283 /* ChartDetailView.swift */; };
@@ -108,10 +111,13 @@
 		706D8D2C223D7407000060FC /* ChartControlCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartControlCell.xib; sourceTree = "<group>"; };
 		706D8D2E223D77B2000060FC /* ChartCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartCell.xib; sourceTree = "<group>"; };
 		706D8D41223E7E72000060FC /* ChartsSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartsSectionHeaderView.xib; sourceTree = "<group>"; };
-		709CA7E52247C0CE0099E20A /* ChartDetailViewDisplayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDetailViewDisplayManager.swift; sourceTree = "<group>"; };
+		709CA7E52247C0CE0099E20A /* ChartDetailViewDatesDisplayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDetailViewDatesDisplayManager.swift; sourceTree = "<group>"; };
 		709CA7E82247C1250099E20A /* ChartDetailViewDateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDetailViewDateCell.swift; sourceTree = "<group>"; };
 		709CA7E92247C1250099E20A /* ChartDetailViewDateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartDetailViewDateCell.xib; sourceTree = "<group>"; };
 		709CA7EC2247C3130099E20A /* UICollectionView+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Factory.swift"; sourceTree = "<group>"; };
+		70A939E02247E0E9003037DF /* ChartDetailViewLineValuesDisplayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDetailViewLineValuesDisplayManager.swift; sourceTree = "<group>"; };
+		70A939E22247E12B003037DF /* ChartDetailViewLineValueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDetailViewLineValueCell.swift; sourceTree = "<group>"; };
+		70A939E32247E12B003037DF /* ChartDetailViewLineValueCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartDetailViewLineValueCell.xib; sourceTree = "<group>"; };
 		70AD1F07223ABC2500AA840D /* ChartViewControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewControl.swift; sourceTree = "<group>"; };
 		70FC4D152242D6F700842283 /* ChartDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartDetailView.xib; sourceTree = "<group>"; };
 		70FC4D172242D71000842283 /* ChartDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDetailView.swift; sourceTree = "<group>"; };
@@ -387,6 +393,8 @@
 			children = (
 				709CA7E82247C1250099E20A /* ChartDetailViewDateCell.swift */,
 				709CA7E92247C1250099E20A /* ChartDetailViewDateCell.xib */,
+				70A939E22247E12B003037DF /* ChartDetailViewLineValueCell.swift */,
+				70A939E32247E12B003037DF /* ChartDetailViewLineValueCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -397,7 +405,8 @@
 				709CA7E72247C0FC0099E20A /* Cells */,
 				70FC4D152242D6F700842283 /* ChartDetailView.xib */,
 				70FC4D172242D71000842283 /* ChartDetailView.swift */,
-				709CA7E52247C0CE0099E20A /* ChartDetailViewDisplayManager.swift */,
+				709CA7E52247C0CE0099E20A /* ChartDetailViewDatesDisplayManager.swift */,
+				70A939E02247E0E9003037DF /* ChartDetailViewLineValuesDisplayManager.swift */,
 			);
 			path = ChartDetailView;
 			sourceTree = "<group>";
@@ -571,6 +580,7 @@
 				706D8D42223E7E72000060FC /* ChartsSectionHeaderView.xib in Resources */,
 				706D8D1F223D51A4000060FC /* ChartsAppearanceCell.xib in Resources */,
 				700BF7272236B5F600806B92 /* chart_data.json in Resources */,
+				70A939E52247E12B003037DF /* ChartDetailViewLineValueCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,12 +606,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				70FC4D2B2243071700842283 /* ChartsAnyCellFactory.swift in Sources */,
+				70A939E42247E12B003037DF /* ChartDetailViewLineValueCell.swift in Sources */,
 				70FC4D282243029E00842283 /* ChartsDetailCell.swift in Sources */,
 				706D8D15223D50AD000060FC /* ChartCell.swift in Sources */,
 				70050B1522397EEB00DC3DB5 /* UITableView+Factory.swift in Sources */,
 				706D8D17223D50CF000060FC /* ChartControlCell.swift in Sources */,
 				709CA7ED2247C3130099E20A /* UICollectionView+Factory.swift in Sources */,
-				709CA7E62247C0CE0099E20A /* ChartDetailViewDisplayManager.swift in Sources */,
+				709CA7E62247C0CE0099E20A /* ChartDetailViewDatesDisplayManager.swift in Sources */,
 				70050B21223992B700DC3DB5 /* ChartViewController.swift in Sources */,
 				70FC4D1E2242FC6200842283 /* ChartsSectionData.swift in Sources */,
 				709CA7EA2247C1250099E20A /* ChartDetailViewDateCell.swift in Sources */,
@@ -612,6 +623,7 @@
 				7015351922385CBE00645FF0 /* ChartsService.swift in Sources */,
 				70FC4D182242D71000842283 /* ChartDetailView.swift in Sources */,
 				706D8D1A223D5135000060FC /* ChartLineTypeCell.swift in Sources */,
+				70A939E12247E0E9003037DF /* ChartDetailViewLineValuesDisplayManager.swift in Sources */,
 				706D8D25223D5527000060FC /* ChartAnyCellFactory.swift in Sources */,
 				700BF6F72236B4FA00806B92 /* AppDelegate.swift in Sources */,
 				706D8D29223D5B2D000060FC /* ChartsSectionHeaderView.swift in Sources */,

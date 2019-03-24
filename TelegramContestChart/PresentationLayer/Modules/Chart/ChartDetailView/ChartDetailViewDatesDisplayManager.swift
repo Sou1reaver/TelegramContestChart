@@ -8,15 +8,11 @@
 
 import UIKit
 
-
-final class ChartDetailViewDisplayManager: NSObject {
+final class ChartDetailViewDatesDisplayManager: NSObject {
     
     // MARK: - Properties
     private weak var collectionView: UICollectionView?
     private var cellModels: [String] = []
-    
-    private let kSpacing: CGFloat = 0.0
-    private let kPadding: CGFloat = 0.0
     
     var itemSize: CGSize {
         let screenWidth = collectionView?.bounds.size.width ?? 0
@@ -50,7 +46,7 @@ final class ChartDetailViewDisplayManager: NSObject {
 }
 
 // MARK: UICollectionViewDataSource
-extension ChartDetailViewDisplayManager: UICollectionViewDataSource {
+extension ChartDetailViewDatesDisplayManager: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return cellModels.count
@@ -64,7 +60,7 @@ extension ChartDetailViewDisplayManager: UICollectionViewDataSource {
 }
 
 // MARK: UICollectionViewDelegate
-extension ChartDetailViewDisplayManager: UICollectionViewDelegate {
+extension ChartDetailViewDatesDisplayManager: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return itemSize
     }
