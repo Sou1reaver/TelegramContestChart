@@ -13,18 +13,25 @@ class ChartDetailViewDateCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
 }
 
+struct ChartDetailViewDateCellData {
+    let value: String
+    let appearanceType: AppearanceType
+}
+
 struct ChartDetailViewDateCellFactory: ReusableViewFactory {
     
     typealias ViewType = ChartDetailViewDateCell
     
-    private let model: String
+    private let model: ChartDetailViewDateCellData
     
-    init(_ model: String) {
+    init(_ model: ChartDetailViewDateCellData) {
         
         self.model = model
     }
     
     func setup(view: ChartDetailViewDateCell) {
-        view.titleLabel.text = model
+        view.titleLabel.text = model.value
+        view.titleLabel.textColor = UIColor.textColorWith(appearanceType: model.appearanceType)
+        view.backgroundColor = UIColor.chartModuleCellColorWith(appearanceType: model.appearanceType)
     }
 }

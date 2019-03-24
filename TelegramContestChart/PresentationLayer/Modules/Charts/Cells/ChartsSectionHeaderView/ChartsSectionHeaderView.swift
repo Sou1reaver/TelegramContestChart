@@ -15,6 +15,7 @@ class ChartsSectionHeaderView: UITableViewHeaderFooterView {
 
 struct ChartsSectionHeaderData {
     let title: String
+    let appearanceType: AppearanceType
 }
 
 
@@ -31,5 +32,6 @@ struct ChartsSectionHeaderFactory: ReusableViewFactory {
     
     func setup(view: ChartsSectionHeaderView) {
         view.titleLabel.text = model.title
+        view.titleLabel.textColor = UIColor.titleTextColorWith(appearanceType: model.appearanceType)
     }
 }

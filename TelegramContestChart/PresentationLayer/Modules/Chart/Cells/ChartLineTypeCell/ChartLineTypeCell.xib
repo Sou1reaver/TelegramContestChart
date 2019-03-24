@@ -41,6 +41,7 @@
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="meE-pD-hvx" firstAttribute="leading" secondItem="9rd-Nv-eAu" secondAttribute="leading" id="AFc-Qs-bqR"/>
                     <constraint firstAttribute="bottom" secondItem="meE-pD-hvx" secondAttribute="bottom" id="JM4-RL-s2A"/>
@@ -60,6 +61,7 @@
             <connections>
                 <outlet property="colorView" destination="RTP-qw-cjt" id="4Ca-sR-0e2"/>
                 <outlet property="separatorHeightConstraint" destination="4Nl-F5-68k" id="q0J-i4-T3c"/>
+                <outlet property="separatorView" destination="meE-pD-hvx" id="c96-jZ-HIS"/>
                 <outlet property="titleLabel" destination="9rd-Nv-eAu" id="pck-NC-ohr"/>
             </connections>
             <point key="canvasLocation" x="137.59999999999999" y="153.82308845577214"/>

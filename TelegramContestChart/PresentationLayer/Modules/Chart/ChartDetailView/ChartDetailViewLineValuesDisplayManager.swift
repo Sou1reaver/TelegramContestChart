@@ -12,7 +12,7 @@ final class ChartDetailViewLineValuesDisplayManager: NSObject {
     
     // MARK: - Properties
     private weak var tableView: UITableView?
-    private var cellModels: [Int] = []
+    private var cellModels: [ChartDetailViewLineValueCellData] = []
     
     // MARK: - Methods
     init(tableView: UITableView) {
@@ -25,13 +25,12 @@ final class ChartDetailViewLineValuesDisplayManager: NSObject {
         self.tableView = tableView
     }
     
-    func set(_ cellModels: [Int]) {
+    func set(_ cellModels: [ChartDetailViewLineValueCellData]) {
         
         self.cellModels = cellModels
-        tableView?.reloadData()
     }
     
-    func updateCellAt(indexPath: IndexPath, withData data: Int) {
+    func updateCellAt(indexPath: IndexPath, withData data: ChartDetailViewLineValueCellData) {
         let factory = ChartDetailViewLineValueCellFactory(data)
         tableView?.updateCellAt(indexPath: indexPath, withFactory: factory)
     }

@@ -40,13 +40,18 @@ final class ChartsDisplayManager: NSObject {
         tableView?.dataSource = self
         tableView?.delegate = self
         tableView?.rowHeight = UITableView.automaticDimension
+        tableView?.contentInset = UIEdgeInsets.zero
+        
     }
     
     func set(_ sections: [ChartsSectionData]) {
         
         self.sections = sections
-        tableView?.contentInset = UIEdgeInsets.zero
+        
+        let contentOffset = tableView?.contentOffset ?? CGPoint.zero
         tableView?.reloadData()
+        tableView?.layoutIfNeeded()
+        tableView?.setContentOffset(contentOffset, animated: false)
     }
     
     func updateCellAt(indexPath: IndexPath, withData data: ChartsAnyCellData) {

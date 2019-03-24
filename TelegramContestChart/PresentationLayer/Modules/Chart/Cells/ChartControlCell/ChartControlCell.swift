@@ -24,6 +24,7 @@ class ChartControlCell: UITableViewCell {
 
 struct ChartControlCellData: ChartAnyCellData {
     
+    let appearanceType: AppearanceType
     var dataType: ChartAnyCellDataType {
         return .chartControl
     }
@@ -45,6 +46,7 @@ struct ChartControlCellFactory: ReusableViewFactory {
     
     func setup(view: ChartControlCell) {
         view.chartsViewControl.addChartWith(data: model.chartData)
+        view.backgroundColor = UIColor.chartModuleCellColorWith(appearanceType: model.appearanceType)
         view.delegate = delegate
     }
 }

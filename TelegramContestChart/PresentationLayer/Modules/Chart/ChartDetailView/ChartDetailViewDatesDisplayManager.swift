@@ -12,7 +12,7 @@ final class ChartDetailViewDatesDisplayManager: NSObject {
     
     // MARK: - Properties
     private weak var collectionView: UICollectionView?
-    private var cellModels: [String] = []
+    private var cellModels: [ChartDetailViewDateCellData] = []
     
     var itemSize: CGSize {
         let screenWidth = collectionView?.bounds.size.width ?? 0
@@ -33,13 +33,13 @@ final class ChartDetailViewDatesDisplayManager: NSObject {
         self.collectionView = collectionView
     }
     
-    func set(_ cellModels: [String]) {
+    func set(_ cellModels: [ChartDetailViewDateCellData]) {
         
         self.cellModels = cellModels
         collectionView?.reloadData()
     }
     
-    func updateCellAt(indexPath: IndexPath, withData data: String) {
+    func updateCellAt(indexPath: IndexPath, withData data: ChartDetailViewDateCellData) {
         let factory = ChartDetailViewDateCellFactory(data)
         collectionView?.updateCellAt(indexPath: indexPath, withFactory: factory)
     }

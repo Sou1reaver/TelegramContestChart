@@ -19,6 +19,7 @@ struct ChartsDetailsCellData: ChartsAnyCellData {
     var dataType: ChartsAnyCellDataType {
         return .chart
     }
+    let appearanceType: AppearanceType
 }
 
 struct ChartsDetailsCellFactory: ReusableViewFactory {

@@ -13,19 +13,25 @@ class ChartDetailViewLineValueCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
 }
 
+struct ChartDetailViewLineValueCellData {
+    let value: Int
+    let appearanceType: AppearanceType
+}
 
 struct ChartDetailViewLineValueCellFactory: ReusableViewFactory {
     
     typealias ViewType = ChartDetailViewLineValueCell
     
-    private let model: Int
+    private let model: ChartDetailViewLineValueCellData
     
-    init(_ model: Int) {
+    init(_ model: ChartDetailViewLineValueCellData) {
         
         self.model = model
     }
     
     func setup(view: ChartDetailViewLineValueCell) {
-        view.titleLabel.text = String(model)
+        view.titleLabel.text = String(model.value)
+        view.titleLabel.textColor = UIColor.textColorWith(appearanceType: model.appearanceType)
+        view.backgroundColor = UIColor.chartModuleCellColorWith(appearanceType: model.appearanceType)
     }
 }

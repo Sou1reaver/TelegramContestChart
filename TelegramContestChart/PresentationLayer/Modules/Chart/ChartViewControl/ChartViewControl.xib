@@ -27,7 +27,7 @@
             <subviews>
                 <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GW9-5V-pND" customClass="ChartView" customModule="TelegramContestChart" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="3" width="375" height="72"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r7B-Ul-kMU">
                     <rect key="frame" x="0.0" y="3" width="375" height="72"/>
@@ -41,7 +41,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="k6m-FC-V96" secondAttribute="bottom" id="En4-z4-Mgl"/>
                 <constraint firstItem="r7B-Ul-kMU" firstAttribute="bottom" secondItem="GW9-5V-pND" secondAttribute="bottom" id="Icj-cx-iDY"/>

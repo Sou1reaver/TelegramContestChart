@@ -14,6 +14,7 @@ class ChartCell: UITableViewCell {
 
 struct ChartCellData: ChartAnyCellData {
     
+    let appearanceType: AppearanceType
     var dataType: ChartAnyCellDataType {
         return .chart
     }
@@ -34,6 +35,8 @@ struct ChartCellFactory: ReusableViewFactory {
     }
     
     func setup(view: ChartCell) {
+        view.chartDetailView.appearanceType = model.appearanceType
+        view.backgroundColor = UIColor.chartModuleCellColorWith(appearanceType: model.appearanceType)
         view.chartDetailView.setChartWith(data: model.chart, withWidthZoom: model.chatWidthZoom, and: model.chatXOffsetScale)
     }
 }

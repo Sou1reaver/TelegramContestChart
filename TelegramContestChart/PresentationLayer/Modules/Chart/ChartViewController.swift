@@ -10,11 +10,6 @@ import UIKit
 
 private struct ChartModuleState {
     
-    enum AppearanceType {
-        case light
-        case dark
-    }
-    
     var appearanceType: AppearanceType = .light
     var chart: Chart!
 
@@ -27,9 +22,10 @@ private struct ChartModuleState {
 
 class ChartViewController: BaseViewController {
     
-    
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
+        tableView.backgroundColor = UIColor.tableViewBackgroundColorWith(appearanceType: state.appearanceType)
+        tableView.separatorColor = UIColor.tableViewBackgroundColorWith(appearanceType: state.appearanceType)
         tableView.separatorStyle = .none
         tableView.bounces = false
         tableView.alwaysBounceVertical = false
@@ -72,8 +68,8 @@ class ChartViewController: BaseViewController {
         var sections:[ChartSectionData] = []
         
         let chartsCellModels:[ChartAnyCellData] =
-            [ChartCellData(chart: chartDetailData, chatWidthZoom: state.chatWidthZoom, chatXOffsetScale: state.chatXOffsetScale),
-             ChartControlCellData(chartData: chartDetailData.chartViewData)]
+            [ChartCellData(appearanceType: state.appearanceType, chart: chartDetailData, chatWidthZoom: state.chatWidthZoom, chatXOffsetScale: state.chatXOffsetScale),
+             ChartControlCellData(appearanceType: state.appearanceType, chartData: chartDetailData.chartViewData)]
         sections.append(ChartSectionData(type: .charts, cellModels: chartsCellModels))
         
         let linesCells = self.state.chart.lines.compactMap({ [weak self] in
@@ -90,7 +86,7 @@ class ChartViewController: BaseViewController {
         
         let showSeparator = line != state.chart?.lines.last
         let selected = state.selectedLinesTitles.contains(where: {$0 == line.name})
-        return ChartLineTypeCellData(line: line, selected: selected, showSeparator: showSeparator)
+        return ChartLineTypeCellData(line: line, selected: selected, showSeparator: showSeparator, appearanceType: state.appearanceType)
     }
     
     private func display(chart: Chart, selectedAllLines: Bool = false) {
@@ -140,6 +136,7 @@ extension ChartViewController: ChartModuleInput {
         state.chart = initialState.chart
         state.chatWidthZoom = initialState.chatWidthZoom
         state.chatXOffsetScale = initialState.chatXOffsetScale
+        state.appearanceType = initialState.appearanceType
     }
 }
 

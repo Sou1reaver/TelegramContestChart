@@ -42,6 +42,8 @@
 		70A939E12247E0E9003037DF /* ChartDetailViewLineValuesDisplayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A939E02247E0E9003037DF /* ChartDetailViewLineValuesDisplayManager.swift */; };
 		70A939E42247E12B003037DF /* ChartDetailViewLineValueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A939E22247E12B003037DF /* ChartDetailViewLineValueCell.swift */; };
 		70A939E52247E12B003037DF /* ChartDetailViewLineValueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70A939E32247E12B003037DF /* ChartDetailViewLineValueCell.xib */; };
+		70A939EC2247FFD5003037DF /* UIColor+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A939EB2247FFD5003037DF /* UIColor+Appearance.swift */; };
+		70A939EE2248031E003037DF /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A939ED2248031E003037DF /* BaseNavigationController.swift */; };
 		70AD1F08223ABC2500AA840D /* ChartViewControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AD1F07223ABC2500AA840D /* ChartViewControl.swift */; };
 		70FC4D162242D6F700842283 /* ChartDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70FC4D152242D6F700842283 /* ChartDetailView.xib */; };
 		70FC4D182242D71000842283 /* ChartDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FC4D172242D71000842283 /* ChartDetailView.swift */; };
@@ -118,6 +120,8 @@
 		70A939E02247E0E9003037DF /* ChartDetailViewLineValuesDisplayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDetailViewLineValuesDisplayManager.swift; sourceTree = "<group>"; };
 		70A939E22247E12B003037DF /* ChartDetailViewLineValueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDetailViewLineValueCell.swift; sourceTree = "<group>"; };
 		70A939E32247E12B003037DF /* ChartDetailViewLineValueCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartDetailViewLineValueCell.xib; sourceTree = "<group>"; };
+		70A939EB2247FFD5003037DF /* UIColor+Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Appearance.swift"; sourceTree = "<group>"; };
+		70A939ED2248031E003037DF /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		70AD1F07223ABC2500AA840D /* ChartViewControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewControl.swift; sourceTree = "<group>"; };
 		70FC4D152242D6F700842283 /* ChartDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartDetailView.xib; sourceTree = "<group>"; };
 		70FC4D172242D71000842283 /* ChartDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDetailView.swift; sourceTree = "<group>"; };
@@ -175,6 +179,7 @@
 				709CA7EC2247C3130099E20A /* UICollectionView+Factory.swift */,
 				70050B1622397F4100DC3DB5 /* UIColor+HexString.swift */,
 				70FC4D192242D8D100842283 /* UIView+Nib.swift */,
+				70A939EB2247FFD5003037DF /* UIColor+Appearance.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -193,6 +198,7 @@
 				70050B1822397F7600DC3DB5 /* Transition */,
 				70050B1022397E2C00DC3DB5 /* Factory */,
 				70050B1C2239804100DC3DB5 /* BaseViewController.swift */,
+				70A939ED2248031E003037DF /* BaseNavigationController.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -613,9 +619,11 @@
 				706D8D17223D50CF000060FC /* ChartControlCell.swift in Sources */,
 				709CA7ED2247C3130099E20A /* UICollectionView+Factory.swift in Sources */,
 				709CA7E62247C0CE0099E20A /* ChartDetailViewDatesDisplayManager.swift in Sources */,
+				70A939EE2248031E003037DF /* BaseNavigationController.swift in Sources */,
 				70050B21223992B700DC3DB5 /* ChartViewController.swift in Sources */,
 				70FC4D1E2242FC6200842283 /* ChartsSectionData.swift in Sources */,
 				709CA7EA2247C1250099E20A /* ChartDetailViewDateCell.swift in Sources */,
+				70A939EC2247FFD5003037DF /* UIColor+Appearance.swift in Sources */,
 				70AD1F08223ABC2500AA840D /* ChartViewControl.swift in Sources */,
 				70FC4D312243F14C00842283 /* ChartViewControlSelector.swift in Sources */,
 				70050B1222397E3800DC3DB5 /* ReusableViewFactory.swift in Sources */,

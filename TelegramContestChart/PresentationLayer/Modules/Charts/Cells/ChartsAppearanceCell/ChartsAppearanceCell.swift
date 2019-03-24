@@ -19,6 +19,7 @@ struct ChartsAppearanceCellData: ChartsAnyCellData {
     var dataType: ChartsAnyCellDataType {
         return .appearance
     }
+    let appearanceType: AppearanceType
     let title: String
 }
 
@@ -35,6 +36,7 @@ struct ChartsAppearanceCellFactory: ReusableViewFactory {
     
     func setup(view: ChartsAppearanceCell) {
         view.titleLabel.text = model.title
+        view.backgroundColor = UIColor.chartModuleCellColorWith(appearanceType: model.appearanceType)
     }
 }
     

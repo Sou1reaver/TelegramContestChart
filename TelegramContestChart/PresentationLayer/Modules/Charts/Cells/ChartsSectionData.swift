@@ -13,13 +13,14 @@ enum ChartsSectionType: Int {
     case appearance
 }
 
-enum ChartsAnyCellDataType {
+enum ChartsAnyCellDataType:Int {
     case chart
     case appearance
 }
 
 protocol ChartsAnyCellData {
     var dataType: ChartsAnyCellDataType { get }
+    var appearanceType: AppearanceType { get }
 }
 
 struct ChartsSectionData {

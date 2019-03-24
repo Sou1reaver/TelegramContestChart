@@ -25,6 +25,7 @@
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="ceu-nb-Bmo" firstAttribute="top" secondItem="bVQ-s7-6Fs" secondAttribute="top" id="2ak-w9-6EE"/>
                     <constraint firstAttribute="bottom" secondItem="ceu-nb-Bmo" secondAttribute="bottom" id="Sv7-XU-xeY"/>

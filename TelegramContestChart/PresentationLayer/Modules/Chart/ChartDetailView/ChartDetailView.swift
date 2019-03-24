@@ -11,14 +11,21 @@ import UIKit
 struct ChartDetailViewData {
     let chartViewData: ChartViewData!
     let dates: [String]
+    let appearanceType: AppearanceType = .light
 }
 
 class ChartDetailView: UIView {
 
+    @IBOutlet weak var separatorView: UIView!
     @IBOutlet weak var lineValuesTableView: UITableView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
+    var appearanceType: AppearanceType = .light {
+        didSet {
+            updateColors()
+        }
+    }
     
     private lazy var datesDisplayManager: ChartDetailViewDatesDisplayManager = {
         
@@ -62,6 +69,15 @@ class ChartDetailView: UIView {
     private func initialSetup() {
         fromNib()
         updateFrames()
+        
+        updateColors()
+    }
+    
+    private func updateColors() {
+        lineValuesTableView.backgroundColor = UIColor.chartModuleCellColorWith(appearanceType: appearanceType)
+        lineValuesTableView.separatorColor = UIColor.tableViewBackgroundColorWith(appearanceType: appearanceType)
+        separatorView.backgroundColor = UIColor.tableViewBackgroundColorWith(appearanceType: appearanceType)
+        collectionView.backgroundColor = UIColor.chartModuleCellColorWith(appearanceType: appearanceType)
     }
     
     private func updateFrames() {
@@ -118,8 +134,8 @@ class ChartDetailView: UIView {
             chartView.drawChartWith(data: data.chartViewData, withMaxLineVisibleValue: maxLineVisibleValue)
         }
         
-        datesDisplayManager.set(visibleValuesDates)
-        lineValuesDisplayManager.set(valuesForTablefrom(maxLineVisibleValue: maxLineVisibleValue))
+        datesDisplayManager.set(visibleValuesDates.compactMap({ChartDetailViewDateCellData(value: $0, appearanceType: appearanceType)}))
+        lineValuesDisplayManager.set(valuesForTablefrom(maxLineVisibleValue: maxLineVisibleValue).compactMap({ChartDetailViewLineValueCellData(value: $0, appearanceType: appearanceType)}))
     }
     
     private func valuesForTablefrom(maxLineVisibleValue: Int) -> [Int] {

@@ -8,12 +8,12 @@
 
 import UIKit
 
+enum AppearanceType {
+    case light
+    case dark
+}
+
 private struct ChartsModuleState {
-    
-    enum AppearanceType {
-        case light
-        case dark
-    }
     
     var appearanceType: AppearanceType = .light
     var charts: Charts?
@@ -40,7 +40,8 @@ class ChartsViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
+        refreshUI()
     }
     
     override func viewDidFirstLayoutSubviews() {
@@ -67,16 +68,16 @@ class ChartsViewController: BaseViewController {
         }
         
         var sections:[ChartsSectionData] = []
-        let chartDetailsCellModels = charts.list.compactMap({ _ in ChartsDetailsCellData() })
+        let chartDetailsCellModels = charts.list.compactMap({ _ in ChartsDetailsCellData(appearanceType: state.appearanceType) })
         if !chartDetailsCellModels.isEmpty {
-            let chartDetailsHeaderData = ChartsSectionHeaderData(title: "Charts")
+            let chartDetailsHeaderData = ChartsSectionHeaderData(title: "Charts", appearanceType: state.appearanceType)
             sections.append(ChartsSectionData(type: .chart,
                                               headerData: chartDetailsHeaderData,
                                               cellModels: chartDetailsCellModels))
         }
         
-        let appearanceHeaderData = ChartsSectionHeaderData(title: "")
-        let appearanceCellModels = [ChartsAppearanceCellData.init(title: appearanceCellTitle)]
+        let appearanceHeaderData = ChartsSectionHeaderData(title: "", appearanceType: state.appearanceType)
+        let appearanceCellModels = [ChartsAppearanceCellData(appearanceType:state.appearanceType, title: appearanceCellTitle)]
         sections.append(ChartsSectionData(type: .appearance,
                                           headerData: appearanceHeaderData,
                                           cellModels: appearanceCellModels))
@@ -107,8 +108,9 @@ extension ChartsViewController: ChartsDisplayManagerDelegate {
             let chart = charts.list[indexPath.row]
             let height = calculateHeightFor(chart)
             chartCell.heightContainer.constant = height
+            let appearanceType = state.appearanceType
             showSubmodule(ChartViewController(), onView: chartCell.containerView, configuration: { (moduleInput) in
-                let initialState = ChartModuleInitialState(chart: chart, chatWidthZoom: 1, chatXOffsetScale: 1)
+                let initialState = ChartModuleInitialState(chart: chart, chatWidthZoom: 1, chatXOffsetScale: 1, appearanceType: appearanceType)
                 moduleInput.setInitialData(initialState)
             })
         case .appearance:
@@ -127,11 +129,34 @@ extension ChartsViewController: ChartsDisplayManagerDelegate {
         case .chart:
             break
         case .appearance:
-            break
+            switchAppearance()
+        }
+    }
+    
+    private func switchAppearance() {
+        switch self.state.appearanceType {
+        case .light:
+            state.appearanceType = .dark
+        case .dark:
+            state.appearanceType = .light
+        }
+        refreshUI()
+    }
+    
+    private func refreshUI() {
+        navigationController?.navigationBar.barTintColor = UIColor.navigationBarColorWith(appearanceType: state.appearanceType)
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.navigationBarTitleColorWith(appearanceType: state.appearanceType)]
+        
+        let navVC = navigationController as? BaseNavigationController
+        navVC?.appearanceType = state.appearanceType
+        tableView.backgroundColor = UIColor.tableViewBackgroundColorWith(appearanceType: state.appearanceType)
+        
+        if let charts = state.charts {
+            displayCharts(charts: charts)
         }
     }
 }
-    
+
 
 // MARK: - ChartsServiceOutput
 
@@ -139,7 +164,7 @@ extension ChartsViewController: ChartsServiceOutput {
     func didObtainCharts(_ charts: Charts?, withError error: Error?) {
         if let charts = charts {
             state.charts = charts
-            displayCharts(charts: charts)
+            refreshUI()
         }
         if let error = error {
             print(error.localizedDescription)

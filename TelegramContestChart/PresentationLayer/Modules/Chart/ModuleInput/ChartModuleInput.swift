@@ -13,6 +13,7 @@ struct ChartModuleInitialState {
     let chart: Chart
     let chatWidthZoom: CGFloat
     let chatXOffsetScale: CGFloat
+    let appearanceType: AppearanceType
 }
 
 protocol ChartModuleInput: AnyModuleInput {

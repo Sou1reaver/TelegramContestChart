@@ -16,6 +16,7 @@
                 <outlet property="contentView" destination="4Y9-AT-RPa" id="1YT-pm-FQq"/>
                 <outlet property="lineValuesTableView" destination="EWY-gQ-Ofy" id="4Cb-zd-pAa"/>
                 <outlet property="scrollView" destination="9Ov-Xi-yGq" id="C6r-x6-sCR"/>
+                <outlet property="separatorView" destination="F3V-VA-20L" id="zd9-LB-kIS"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -66,7 +67,7 @@
                     </collectionViewFlowLayout>
                 </collectionView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="EWY-gQ-Ofy" secondAttribute="trailing" constant="16" id="653-WY-IA4"/>
                 <constraint firstItem="9Ov-Xi-yGq" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="9QU-J7-7SD"/>

@@ -12,6 +12,8 @@ class ChartLineTypeCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var colorView: UIView!
+    @IBOutlet weak var separatorView: UIView!
+    
     @IBOutlet weak private var separatorHeightConstraint: NSLayoutConstraint!
     
     var showSeparator: Bool = true {
@@ -29,6 +31,7 @@ class ChartLineTypeCell: UITableViewCell {
 
 struct ChartLineTypeCellData: ChartAnyCellData {
     
+    let appearanceType: AppearanceType
     var dataType: ChartAnyCellDataType {
         return ChartAnyCellDataType.lineType(title: title)
     }
@@ -37,11 +40,12 @@ struct ChartLineTypeCellData: ChartAnyCellData {
     let showSeparator: Bool
     let selected: Bool
     
-    init(line: Line, selected: Bool, showSeparator: Bool) {
+    init(line: Line, selected: Bool, showSeparator: Bool, appearanceType: AppearanceType) {
         title = line.name
         color = UIColor(hexString: line.edgeHexColor)
         self.showSeparator = showSeparator
         self.selected = selected
+        self.appearanceType = appearanceType
     }
 }
 
@@ -59,7 +63,10 @@ struct ChartLineTypeCellFactory: ReusableViewFactory {
     func setup(view: ChartLineTypeCell) {
         view.colorView.backgroundColor = model.color
         view.titleLabel.text = model.title
+        view.titleLabel.textColor = UIColor.chartLineTypeCellTextColorWith(appearanceType: model.appearanceType)
         view.showSeparator = model.showSeparator
         view.accessoryType = model.selected ? .checkmark : .none
+        view.backgroundColor = UIColor.chartModuleCellColorWith(appearanceType: model.appearanceType)
+        view.separatorView.backgroundColor = UIColor.tableViewBackgroundColorWith(appearanceType: model.appearanceType)
     }
 }

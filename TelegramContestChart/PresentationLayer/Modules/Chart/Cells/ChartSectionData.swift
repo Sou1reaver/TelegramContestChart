@@ -21,6 +21,7 @@ enum ChartAnyCellDataType {
 
 protocol ChartAnyCellData {
     var dataType: ChartAnyCellDataType { get }
+    var appearanceType: AppearanceType { get }
 }
 
 struct ChartSectionData {
